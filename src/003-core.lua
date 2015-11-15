@@ -8,11 +8,12 @@ Core = (function()
 		return #str > len and string.sub(str, 1, len) .. ellipsis or str
 	end
 
-	local function formatTime(seconds)
+	local function formatTime(seconds, simpleFormat)
 		local d, h, m, s = math.floor(seconds / 86400),
-		              math.floor(seconds / 3600) % 24,
-		              math.floor(seconds / 60) % 60, seconds % 60
-		return string.format('%02d:%02d:%02d:%02d', d, h, m, s)
+		                   math.floor(seconds / 3600) % 24,
+		                   math.floor(seconds / 60) % 60,
+				   seconds % 60
+	        return simpleFormat and string.format('%02d:%02d', 24*d+h, m) or string.format('%02d:%02d:%02d:%02d', d, h, m, s)
 	end
 
 	local function formatNumber(n)
