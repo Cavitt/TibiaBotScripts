@@ -800,7 +800,7 @@ Container = (function()
 					if not itemTotal then
 						totals[itemid] = itemcount
 					else
-						itemTotal = itemTotal + itemcount
+						totals[itemid] = itemTotal + itemcount
 					end
 				end
 			end
