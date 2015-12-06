@@ -4,12 +4,13 @@
 </panel>
 <panel name="Self Healer">
 	<control name="SpellList">
-		<item spell="Exura Vita" mana="160" vcomp="0" vsign="1" vrandom="0" vvalue="45" enabled="1"/>
-		<item spell="Exura Gran" mana="70" vcomp="0" vsign="1" vrandom="0" vvalue="70" enabled="1"/>
-		<item spell="Exura" mana="20" vcomp="0" vsign="1" vrandom="0" vvalue="90" enabled="1"/>
+		<item spell="exura gran san" mana="210" vcomp="0" vsign="1" vrandom="0" vvalue="70" enabled="1"/>
+		<item spell="exura gran" mana="70" vcomp="0" vsign="1" vrandom="0" vvalue="85" enabled="1"/>
+		<item spell="exura" mana="20" vcomp="0" vsign="1" vrandom="0" vvalue="92" enabled="1"/>
 	</control>
 	<control name="ItemList">
-		<item id="238" vcomp="0" vsign="3" vrandom="0" vvalue="35" enabled="1"/>
+		<item id="7642" vcomp="0" vsign="1" vrandom="0" vvalue="50" enabled="1"/>
+		<item id="237" vcomp="0" vsign="3" vrandom="0" vvalue="50" enabled="1"/>
 	</control>
 </panel>
 <panel name="Tools">
@@ -43,10 +44,10 @@
 	<control name="EnergyCureMana" value="30"/>
 	<control name="EnergyCureEnable" value="0"/>
 	<control name="ParaCureEnable" value="1"/>
-	<control name="ParaCureMana" value="70"/>
-	<control name="ParaCureSpell" value="exura gran"/>
-	<control name="HasteCastMana" value="100"/>
-	<control name="HasteCastSpell" value="Utani Gran Hur"/>
+	<control name="ParaCureMana" value="160"/>
+	<control name="ParaCureSpell" value="exura san"/>
+	<control name="HasteCastMana" value="60"/>
+	<control name="HasteCastSpell" value="Utani Hur"/>
 	<control name="HasteCastEnable" value="1"/>
 	<control name="InvisibleCastMana" value="50"/>
 	<control name="InvisibleCastEnable" value="0"/>
@@ -59,10 +60,10 @@
 </panel>
 <panel name="Targeting">
 	<control name="TargetingList">
-		<item type="Grim Reaper" chs="7" max="100" min="0" prio="9" prox="3" count="3" elastic="1"/>
-		<item type="Grim Reaper" chs="7" max="100" min="0" prio="8" prox="7" count="3" elastic="1"/>
-		<item type="Grim Reaper" chs="6" max="100" min="0" prio="7" prox="3" count="1" elastic="1"/>
-		<item type="Grim Reaper" chs="6" max="100" min="0" prio="6" prox="7" count="1" elastic="1"/>
+		<item type="Grim Reaper" chs="3" max="100" min="0" prio="9" prox="3" count="3" elastic="1"/>
+		<item type="Grim Reaper" chs="3" max="100" min="0" prio="8" prox="7" count="3" elastic="1"/>
+		<item type="Grim Reaper" chs="2" max="100" min="0" prio="7" prox="3" count="1" elastic="1"/>
+		<item type="Grim Reaper" chs="2" max="100" min="0" prio="6" prox="7" count="1" elastic="1"/>
 		<item type="*" chs="0" max="100" min="0" prio="10" prox="7" count="1"/>
 	</control>
 </panel>
@@ -169,6 +170,7 @@
 		<item text="Node (32799, 31054, 9)" tag="0"/>
 		<item text="Node (32800, 31050, 9)" tag="0"/>
 		<item text="Node (32805, 31047, 9)" tag="0"/>
+		<item text="EIgnore" tag="11"/>
 		<item text="huntcheck|3:" tag="255"/>
 		<item text="huntstart|3:" tag="255"/>
 		<item text="Node (32805, 31041, 9)" tag="0"/>
