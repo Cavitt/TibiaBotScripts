@@ -2621,7 +2621,6 @@ local ITEM_LIST_BACKPACKS = {
 	[14249] = true,
 	[16099] = true,
 	[16100] = true,
-	[21295] = true,
 	[21295] = true
 }
 
