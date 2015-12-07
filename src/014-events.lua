@@ -4,6 +4,7 @@ do
 	local formatTime = Core.formatTime
 	local freeMemory = Core.freeMemory
 	local throttle = Core.throttle
+	local talk = Core.talk
 	local clearTimeout = Core.clearTimeout
 	local setTimeout = Core.setTimeout
 	local setInterval = Core.setInterval
