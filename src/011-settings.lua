@@ -209,7 +209,7 @@ Settings = (function()
 						end
 					end
 					targets = table.concat(targets, ',')
-				else
+				elseif targets then
 					targets = titlecase(targets)
 				end
 
