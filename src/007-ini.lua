@@ -186,8 +186,8 @@ Ini = (function()
 		loadBlockSection('Supplies')
 		loadBlockSection('Runes', {'Priority', 'TargetMin', 'Targets', 'MaxHP', 'MinHP'})
 		loadBlockSection('Spells', {'Priority', 'TargetMin', 'Targets', 'Utito', 'MaxHP', 'MinHP'})
-		loadBlockSection('Ring', {'Creature-Equip', 'Health-Equip', 'Mana-Equip'})
-		loadBlockSection('Amulet', {'Creature-Equip', 'Health-Equip', 'Mana-Equip'})
+		loadBlockSection('Ring', {'Creatures', 'CreatureCount', 'MinHP', 'MinMP'})
+		loadBlockSection('Amulet', {'Creatures', 'CreatureCount', 'MinHP', 'MinMP'})
 	end
 
 	local function loadMasterConfig()

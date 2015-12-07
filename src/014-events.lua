@@ -4,6 +4,7 @@ do
 	local formatTime = Core.formatTime
 	local freeMemory = Core.freeMemory
 	local throttle = Core.throttle
+	local titlecase = Core.titlecase
 	local talk = Core.talk
 	local clearTimeout = Core.clearTimeout
 	local setTimeout = Core.setTimeout
@@ -811,33 +812,53 @@ do
 		local playerAmulet = xeno.getAmuletSlotData().id
 		local playerHealth = math.abs((xeno.getSelfHealth() / xeno.getSelfMaxHealth()) * 100)
 		local playerMana = math.abs((xeno.getSelfMana() / xeno.getSelfMaxMana()) * 100)
-		local playerTargets = 0
-
-		for i = CREATURES_LOW, CREATURES_HIGH do
-			local cpos = xeno.getCreaturePosition(i)
-			local distance = getDistanceBetween(playerPos, cpos)
-			if playerPos.z == cpos.z and distance <= 7 then
-				if xeno.getCreatureVisible(i) and xeno.getCreatureHealthPercent(i) > 0 and xeno.isCreatureMonster(i) then
-					playerTargets = playerTargets + 1
-				end
-			end
-		end
+		local creatures = 0
 
 		-- Loop through supplies
 		-- TODO: this seems like it could be optimized
 		for itemid, supply in pairs(_supplies) do
 			-- Check rings & amulets
 			if supply.group == 'Ring' or supply.group == 'Amulet' and supply.options then
+
+				-- Titlecase monsters incase the user didn't
+				local targets = supply.options['Creatures']
+				if type(targets) == 'table' then
+				    for i = 1, #targets do
+				        if targets[i] then
+				            targets[i] = titlecase(targets[i])
+				        end
+				    end
+				elseif targets then
+				    targets = {titlecase(targets)}
+				end
+				 
+				for i = CREATURES_LOW, CREATURES_HIGH do
+				    local name = xeno.getCreatureName(i)
+				    -- Is this creature invited to die?
+				    if table.find(targets, name) then
+						-- Position & Distance
+						local cpos = xeno.getCreaturePosition(i)
+						local distance = getDistanceBetween(playerPos, cpos)
+						if playerPos.z == cpos.z and distance <= 7 then
+							-- Normal creature checks
+							if xeno.getCreatureVisible(i) and xeno.getCreatureHealthPercent(i) > 0 and xeno.isCreatureMonster(i) then
+								creatures = creatures + 1
+							end
+						end
+					end
+				end
+
 				-- Thresholds
 				local triggered = false
-				local creatures = supply.options['Creature-Equip'] or 0
-				local health = supply.options['Health-Equip'] or 0
-				local mana = supply.options['Mana-Equip'] or 0
-				local ignore = creatures == 0 and health == 0 and mana == 0
+				local count = supply.options['CreatureCount'] or 0
+				local health = supply.options['MinHP'] or 0
+				local mana = supply.options['MinMP'] or 0
+				local ignore = count == 0 and health == 0 and mana == 0
+
 				if not ignore then
 					local slotItem = supply.group == 'Ring' and playerRing or playerAmulet
 					-- We need to equip the ring
-					if (creatures > 0 and playerTargets >= creatures) or (health > 0 and playerHealth <= health) or (mana > 0 and playerMana <= mana) then
+					if (count > 0 and creatures >= count) or (health > 0 and playerHealth <= health) or (mana > 0 and playerMana <= mana) then
 						-- Only equip if we don't have it on already
 						if slotItem ~= itemid and slotItem ~= ITEM_LIST_ACTIVE_RINGS[itemid] then
 							equip[supply.group] = itemid
