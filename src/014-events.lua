@@ -119,7 +119,7 @@ do
 				-- Resupply
 				if _script.returnQueued or supplies.min or lowCap or needSoftbootRepair then
 					state = 'Walking to exit'
-					log('Returning to ' .. _script.town .. ' to re-supply.' .. (_script.returnQueued and ' [forced]' or ''))
+					log('Returning to ' .. _script.town .. ' to ' .. (needSoftbootRepair and 'repair soft boots.' or 're-supply.') .. (_script.returnQueued and ' [forced]' or ''))
 					-- Clean backpacks
 					cleanContainers(_backpacks['Loot'], ITEM_LIST_SKINNABLE_LOOT, nil, true)
 					-- Route system
