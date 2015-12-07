@@ -7893,11 +7893,5 @@
   {"label": "Stand (32777, 31247, 6)", "tag": 1},
   {"label": "Node (32786, 31250, 5)", "tag": 0},
   {"label": "Stand (32786, 31250, 5)", "tag": 1},
-  {"label": "end:", "tag": 255},
-  
-  {"label": "yalahar|potions~ammo:", "tag": 255},
-  {"label": "Stand (32790, 31239, 5)", "tag": 1},
-  {"label": "Stand (32789, 31239, 4)", "tag": 1},
-  {"label": "Stand (32789, 31238, 3)", "tag": 1},
   {"label": "end:", "tag": 255}
 ]
