@@ -60,6 +60,7 @@
 </panel>
 <panel name="Targeting">
 	<control name="TargetingList">
+		<item type="Gargoyle" chs="0" max="12" min="0" prio="3" prox="7" count="1"/>
 		<item type="Tarantula, Gargoyle, Stone Golem, Blood Crab, Thornback Tortoise" chs="6" max="100" min="0" prio="2" prox="3" count="1" elastic="1"/>
 		<item type="Tarantula, Gargoyle, Stone Golem, Blood Crab, Thornback Tortoise" chs="6" max="100" min="0" prio="1" prox="7" count="1" elastic="1"/>
 		<item type="*" chs="0" max="100" min="0" prio="10" prox="7" count="1"/>
