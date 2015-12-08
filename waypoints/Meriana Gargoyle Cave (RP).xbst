@@ -23,7 +23,7 @@
 	<control name="XRayEnable" value="0"/>
 	<control name="ShowLookIDs" value="1"/>
 	<control name="ShowManaBar" value="1"/>
-	<control name="ShowBPInfo" value="1"/>
+	<control name="ShowBPInfo" value="0"/>
 	<control name="EnableSmallBPs" value="1"/>
 	<control name="EnableAdvancedInfo" value="0"/>
 </panel>
