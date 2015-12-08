@@ -157,7 +157,11 @@ Ini = (function()
 									local extraKey = extras[i]
 									local extraValue = section[name .. extraKey]
 									if extraValue ~= nil then
-										options[extraKey] = extraValue
+										if extraKey == 'Creatures' then
+										    options[extraKey] = indexTable(extraValue, true)
+										else
+										    options[extraKey] = extraValue
+										end
 									end
 								end
 							end
