@@ -831,28 +831,16 @@ do
 		    -- Check rings & amulets
 		    if supply.group == 'Ring' or supply.group == 'Amulet' and supply.options then
 
-		        -- THIS SECTION SHOULD BE DONE ONLY ONCE, BY THE CONFIG PARSER IMO
-		        -- Titlecase monsters incase the user didn't
 		        local targets = supply.options['Creatures']
-		        local isTarget = {}
-		        if type(targets) == 'table' then
-		            for i = 1, #targets do
-		                if targets[i] then
-		                   isTarget[titlecase(targets[i])] = true
-		                end
-		            end
-		        elseif targets then
-		            isTarget[titlecase(targets)] = true
-		        end
-		         
+		        		         
 		        -- Count only monsters in the config
-		        local creatures = 0 -- Moved into the loops to fix a bug. Remember to remove the earlier definition.
-		        for _, i in ipairs(validCreaturesIndexes) do
-		            local name = xeno.getCreatureName(i)
-		            if isTarget[name] then
-		                creatures = creatures + 1
-		            end
-		        end
+                local creatures = 0 -- Moved into the loops to fix a bug. Remember to remove the earlier definition.
+                for _, i in ipairs(validCreaturesIndexes) do
+                    local name = xeno.getCreatureName(i)
+                    if targets[name:lower()] then
+                        creatures = creatures + 1
+                    end
+                end
 
 		        -- Thresholds
 		        local triggered = false
