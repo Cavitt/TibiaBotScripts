@@ -354,8 +354,8 @@ do
 
 				-- Not safe, bitch label found, run
 				elseif label and label ~= 'nil' then
-
 					xeno.gotoLabel(label)
+					resumeWalker()
 				-- Not safe, wait until it is
 				else
 					firstCheck = false
