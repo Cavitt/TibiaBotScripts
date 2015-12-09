@@ -335,8 +335,8 @@ do
 			local function checkFloor()
 				local threshold = targetingGetCreatureThreshold(
 					creatures,
-					range or _config['Anti Lure']['Range'],
-					amount or _config['Anti Lure']['Amount'],
+					range and tonumber(range) or _config['Anti Lure']['Range'],
+					amount and tonumber(amount) or _config['Anti Lure']['Amount'],
 					false,
 					tonumber(floor)
 				)
@@ -350,9 +350,12 @@ do
 					else
 						resumeWalker()
 					end
+
 				-- Not safe, bitch label found, run
 				elseif label and label ~= 'nil' then
+
 					xeno.gotoLabel(label)
+				-- Not safe, wait until it is
 				else
 					firstCheck = false
 					setTimeout(checkFloor, 200)
