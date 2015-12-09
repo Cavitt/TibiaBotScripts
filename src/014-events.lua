@@ -1,5 +1,6 @@
 do
 	-- Imports
+	local debug = Core.debug
 	local formatNumber = Core.formatNumber
 	local formatTime = Core.formatTime
 	local freeMemory = Core.freeMemory
@@ -557,36 +558,36 @@ do
 			local serverSave = getTimeUntilServerSave() * 3600
 			local playerStamina = xeno.getSelfStamina() * 60
 			local logoutConfig = _config['Logout']
-                        local simpleTime = _config['HUD'] and _config['HUD']['Simple-Time-Format']
+						local simpleTime = _config['HUD'] and _config['HUD']['Simple-Time-Format']
 			
 			hudItemUpdate('General', 'Balance', _script.balance, true)
 			hudItemUpdate('General', 'Online Time', formatTime(timediff, simpleTime), true)
- 			
- 			local timeLimit = logoutConfig['Time-Limit'] or 0
- 			local ssLimit = logoutConfig['Server-Save'] or 0
- 			local stamLimit = logoutConfig['Stamina'] or 0
- 			local remaining = {}
+			
+			local timeLimit = logoutConfig['Time-Limit'] or 0
+			local ssLimit = logoutConfig['Server-Save'] or 0
+			local stamLimit = logoutConfig['Stamina'] or 0
+			local remaining = {}
 
- 			if timeLimit > 0 then
- 				remaining[#remaining+1] = (timeLimit * 3600) - (os.time() - _script.start)
- 			end
+			if timeLimit > 0 then
+				remaining[#remaining+1] = (timeLimit * 3600) - (os.time() - _script.start)
+			end
 
- 			if serverSave > 0 then
- 				remaining[#remaining+1] = serverSave - (ssLimit * 3600)
- 			end
+			if serverSave > 0 then
+				remaining[#remaining+1] = serverSave - (ssLimit * 3600)
+			end
 
- 			if stamLimit > 0 then
- 				remaining[#remaining+1] = playerStamina - (stamLimit * 3600)
- 			end
+			if stamLimit > 0 then
+				remaining[#remaining+1] = playerStamina - (stamLimit * 3600)
+			end
 
- 			-- Sort remaining times (lowest first)
+			-- Sort remaining times (lowest first)
 			table.sort(remaining)
 
 			-- Choose lowest remaining time to display
 			local remainingTime = remaining[1]
- 			if remainingTime then
+			if remainingTime then
 				hudItemUpdate('General', 'Time Remaining', formatTime(remainingTime, simpleTime), true)
- 			end
+			end
 
 			hudItemUpdate('General', 'Server Save', formatTime(serverSave, simpleTime), true)
 			hudItemUpdate('General', 'Stamina', formatTime(playerStamina, simpleTime), true)
@@ -833,53 +834,58 @@ do
 		-- Collect all valid creatures
 		local validCreaturesIndexes = {}
 		for i = CREATURES_LOW, CREATURES_HIGH do
-		    -- Position & Distance
-		    local cpos = xeno.getCreaturePosition(i)
-		    local distance = getDistanceBetween(playerPos, cpos)
-		    if playerPos.z == cpos.z and distance <= 7 then
-		        -- Normal creature checks
-		        if xeno.getCreatureVisible(i) and xeno.getCreatureHealthPercent(i) > 0 and xeno.isCreatureMonster(i) then
-		            table.insert(validCreaturesIndexes, i)
-		        end
-		    end
+			-- Position & Distance
+			local cpos = xeno.getCreaturePosition(i)
+			local distance = getDistanceBetween(playerPos, cpos)
+			if playerPos.z == cpos.z and distance <= 7 then
+				-- Normal creature checks
+				if xeno.getCreatureVisible(i) and xeno.getCreatureHealthPercent(i) > 0 and xeno.isCreatureMonster(i) then
+					table.insert(validCreaturesIndexes, i)
+				end
+			end
 		end
 
 		for itemid, supply in pairs(_supplies) do
-		    -- Check rings & amulets
-		    if supply.group == 'Ring' or supply.group == 'Amulet' and supply.options then
+			-- Check rings & amulets
+			if supply.group == 'Ring' or supply.group == 'Amulet' and supply.options then
 
-		        local targets = supply.options['Creatures'] or {}
-		        		         
-		        -- Count only monsters in the config
-                local creatures = 0 -- Moved into the loops to fix a bug. Remember to remove the earlier definition.
-                for _, i in ipairs(validCreaturesIndexes) do
-                    local name = xeno.getCreatureName(i)
-                    if targets[name:lower()] then
-                        creatures = creatures + 1
-                    end
-                end
+				-- Thresholds
+				local triggered = false
+				local count = supply.options['CreatureCount'] or 0
+				local health = supply.options['MinHP'] or 0
+				local mana = supply.options['MinMP'] or 0
+				local ignore = count == 0 and health == 0 and mana == 0
 
-		        -- Thresholds
-		        local triggered = false
-		        local count = supply.options['CreatureCount'] or 0
-		        local health = supply.options['MinHP'] or 0
-		        local mana = supply.options['MinMP'] or 0
-		        local ignore = count == 0 and health == 0 and mana == 0
+				if not ignore then
 
-		        if not ignore then
-		            local slotItem = supply.group == 'Ring' and playerRing or playerAmulet
-		            -- We need to equip the ring
-		            if (count > 0 and creatures >= count) or (health > 0 and playerHealth <= health) or (mana > 0 and playerMana <= mana) then
-		                -- Only equip if we don't have it on already
-		                if slotItem ~= itemid and slotItem ~= ITEM_LIST_ACTIVE_RINGS[itemid] then
-		                    equip[supply.group] = itemid
-		                end
-		            -- We need to un-equip the ring
-		            elseif slotItem == itemid or slotItem == ITEM_LIST_ACTIVE_RINGS[itemid] then
-		                unequip[supply.group] = itemid
-		            end
-		        end
-		    end
+					local targets = supply.options['Creatures'] or {}
+									 
+					-- Count only monsters in the config
+					local creatures = 0 -- Moved into the loops to fix a bug. Remember to remove the earlier definition.
+					if count > 0 then
+						for _, i in ipairs(validCreaturesIndexes) do
+							local name = xeno.getCreatureName(i)
+							debug('ring equipper - name: ' .. name)
+							if targets[name:lower()] then
+								creatures = creatures + 1
+								debug('ring equipper - creature #: ' .. creatures)
+							end
+						end
+					end
+
+					local slotItem = supply.group == 'Ring' and playerRing or playerAmulet
+					-- We need to equip the ring
+					if (count > 0 and creatures >= count) or (health > 0 and playerHealth <= health) or (mana > 0 and playerMana <= mana) then
+						-- Only equip if we don't have it on already
+						if slotItem ~= itemid and slotItem ~= ITEM_LIST_ACTIVE_RINGS[itemid] then
+							equip[supply.group] = itemid
+						end
+					-- We need to un-equip the ring
+					elseif slotItem == itemid or slotItem == ITEM_LIST_ACTIVE_RINGS[itemid] then
+						unequip[supply.group] = itemid
+					end
+				end
+			end
 		end
 
 		-- Equip all queued supplies
@@ -929,12 +935,12 @@ do
 			-- Help command
 			if command == 'help' then
 				log([[Available commands:
-	                /resupply  =  Forces the script to return to town after the current round.
-	                /logout  =  Forces the script to return to town and logout after the current round.
-	                /config = Opens the config file for this script.
-	                /resethud  =  Reset the session start time.
-	                /history  =  Opens a channel to monitor received private messages.
-	                /debug = Opens a debug channel with more verbose logging.]])
+					/resupply  =  Forces the script to return to town after the current round.
+					/logout  =  Forces the script to return to town and logout after the current round.
+					/config = Opens the config file for this script.
+					/resethud  =  Reset the session start time.
+					/history  =  Opens a channel to monitor received private messages.
+					/debug = Opens a debug channel with more verbose logging.]])
 			-- Clear memory
 			elseif command == 'freemem' then
 				local bytes = freeMemory()
