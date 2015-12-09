@@ -13,6 +13,7 @@ do
 	local checkEvents = Core.checkEvents
 	local delayWalker = Core.delayWalker
 	local resumeWalker = Core.resumeWalker
+	local indexTable = Core.indexTable
 	local split = Core.split
 	local pingDelay = Core.pingDelay
 	local getTimeUntilServerSave = Core.getTimeUntilServerSave
@@ -326,7 +327,7 @@ do
 			-- Pause walker
 			delayWalker()
 
-			local creatures = list and split(list, ',') or _config['Anti Lure']['Creatures']
+			local creatures = list and indexTable(split(list, ','), true) or _config['Anti Lure']['Creatures']
 			if not creatures then
 				resumeWalker()
 			end
