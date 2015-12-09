@@ -312,10 +312,11 @@ Supply = (function()
 		-- Add all travel costs to total
 		if venoreTravel then
 			local travelRoute = TRAVEL_ROUTES[sourceTown .. '~venore']
+			local returnRoute = TRAVEL_ROUTES['venore~' .. sourceTown]
 			if not travelRoute then
 				error('Missing travel route from ' .. sourceTown .. ' to venore. Please contact support.')
 			end
-			totalCost = totalCost + travelRoute.cost
+			totalCost = totalCost + travelRoute.cost + returnRoute.cost
 		end
 		if edronTravel and sourceTown ~= 'edron' then
 			-- We already had to go to venore, head from venore to edron
@@ -323,10 +324,11 @@ Supply = (function()
 				sourceTown = 'venore'
 			end
 			local travelRoute = TRAVEL_ROUTES[sourceTown .. '~edron']
+			local returnRoute = TRAVEL_ROUTES['edron~' .. sourceTown]
 			if not travelRoute then
 				error('Missing travel route from ' .. sourceTown .. ' to edron. Please contact support.')
 			end
-			totalCost = totalCost + travelRoute.cost
+			totalCost = totalCost + travelRoute.cost + returnRoute.cost
 		end
 
 		return {
