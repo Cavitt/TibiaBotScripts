@@ -321,6 +321,47 @@ do
 			end
 		end,
 
+		-- Anti-Lure Spy System
+		['spy'] = function(group, floor, label, range, amount, list)
+			-- Pause walker
+			delayWalker()
+
+			local creatures = list and split(list, ',') or _config['Anti Lure']['Creatures']
+			if not creatures then
+				resumeWalker()
+			end
+
+			local firstCheck = true
+			local function checkFloor()
+				local threshold = targetingGetCreatureThreshold(
+					creatures,
+					range or _config['Anti Lure']['Range'],
+					amount or _config['Anti Lure']['Amount'],
+					false,
+					tonumber(floor)
+				)
+
+				-- Safe
+				if not threshold[1] then
+					if not firstCheck then
+						setTimeout(function()
+							resumeWalker()
+						end, pingDelay(DELAY.ANTILURE_DELAY))
+					else
+						resumeWalker()
+					end
+				-- Not safe, bitch label found, run
+				elseif label and label ~= 'nil' then
+					xeno.gotoLabel(label)
+				else
+					firstCheck = false
+					setTimeout(checkFloor, 200)
+				end
+			end
+
+			checkFloor()
+		end,
+
 		-- Traveling (travel|ankrahmun~svargrond)
 		['travel'] = function(group, route)
 			delayWalker()
