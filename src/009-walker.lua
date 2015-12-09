@@ -209,11 +209,8 @@ Walker = (function()
 	end
 
 	local function walkToPos(x, y, z)
-		_script.blockCritMode = true
 		_script.unsafeQueue = 0
-		xeno.exitCriticalMode()
 		xeno.doSelfWalkTo(x, y, z)
-		_script.blockCritMode = false
 	end
 
 	local function walkerReachNPC(name, callback, tries)
@@ -223,6 +220,7 @@ Walker = (function()
 		local selfPos = xeno.getSelfPosition()
 
 		-- Loop through battle list
+		xeno.enterCriticalMode()
 		for i = 0, 1300 do
 			local creaturePos = xeno.getCreaturePosition(i)
 			local distance = getDistanceBetween(selfPos, creaturePos)
@@ -235,11 +233,13 @@ Walker = (function()
 					break
 				-- We are close enough
 				else
+					xeno.exitCriticalMode()
 					callback()
 					return
 				end
 			end
 		end
+		xeno.exitCriticalMode()
 
 		-- Failed to find NPC
 		if not targetPos then

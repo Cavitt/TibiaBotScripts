@@ -462,32 +462,6 @@ do
 		end
 	}
 
-	local function toggleCriticalMode(state)
-		if _script.blockCritMode then
-			return
-		end
-
-		-- We want to turn crit mode on
-		if state then
-			-- Crit mode is not already on
-			if _script.unsafeQueue < 1 then
-				xeno.enterCriticalMode()
-				_script.unsafeQueue = 1
-			-- Crit mode is already on, increment to stay in crit mode
-			else
-				_script.unsafeQueue = _script.unsafeQueue + 1
-			end
-		-- We want to turn crit mode off
-		else
-			_script.unsafeQueue = _script.unsafeQueue - 1
-			-- Zero or below, exit crit mode
-			if _script.unsafeQueue < 1 then
-				xeno.exitCriticalMode()
-				_script.unsafeQueue = 0
-			end
-		end
-	end
-
 	local _huntingForDepot = false
 	local _snapbacks = 0
 	local _lastsnapback = 0
@@ -496,8 +470,6 @@ do
 
 	function onTick()
 		if not _script.ready then return end
-
-		toggleCriticalMode(true)
 
 		-- Check and execute timers
 		checkTimers()
@@ -691,19 +663,19 @@ do
 			hudUpdatePositions()
 		end
 
-		toggleCriticalMode(false)
+		
 	end
 
 	function onLabel(name)
 		if not _script.ready then return end
-		toggleCriticalMode(true)
+		
 
 		-- Path end event
 		if name == 'end' then
 			delayWalker()
 			checkEvents(EVENT_PATH_END, _path)
 			_path = {town = nil, route = nil, town = nil, from = nil, to = nil}
-			toggleCriticalMode(false)
+			
 			return
 		end
 
@@ -711,7 +683,7 @@ do
 		if name == 'depotend' then
 			delayWalker()
 			checkEvents(EVENT_DEPOT_END, 'depotend')
-			toggleCriticalMode(false)
+			
 			return
 		end
 
@@ -731,7 +703,7 @@ do
 
 			-- Update path
 			_path = {town = town, route = route, town = town, from = from, to = to}
-			toggleCriticalMode(false)
+			
 			return
 		end
 
@@ -748,12 +720,12 @@ do
 		if event then
 			event(unpack(label))
 		end
-		toggleCriticalMode(false)
+		
 	end
 
 	function onErrorMessage(message)
 		if not _script.ready then return end
-		toggleCriticalMode(true)
+		
 
 		checkEvents(EVENT_ERROR, message)
 
@@ -790,12 +762,12 @@ do
 			end
 		end
 
-		toggleCriticalMode(false)
+		
 	end
 
 	function onLootMessage(message)
 		if not _script.ready then return end
-		toggleCriticalMode(true)
+		
 
 		-- Check if we need to pump mana
 		local manaRestorePercent = _config['Mana Restorer']['Restore-Percent']
@@ -836,7 +808,7 @@ do
 		throttle(THROTTLE_CAP_DROP, walkerCapacityDrop)
 
 		checkEvents(EVENT_LOOT, message)
-		toggleCriticalMode(false)
+		
 	end
 
 	local _battleMsgRunning = false
@@ -846,7 +818,7 @@ do
 
 		_battleMsgRunning = true
 
-		toggleCriticalMode(true)
+		
 
 		-- What should we equip/un-equip (slot=itemid)
 		local equip = {}
@@ -939,14 +911,14 @@ do
 
 		checkSoftBoots()
 		checkEvents(EVENT_BATTLE, message)
-		toggleCriticalMode(false)
+		
 		_battleMsgRunning = false
 	end
 
 	function onChannelSpeak(channel, message)
 		-- Do not check if the script is event ready
 		-- prompts are needed beforehand
-		toggleCriticalMode(true)
+		
 
 		-- First character is slash, command is expected
 		if string.sub(message, 1, 1) == '/' then
@@ -1024,7 +996,7 @@ do
 		else
 			checkEvents(EVENT_COMMAND, message)
 		end
-		toggleCriticalMode(false)
+		
 	end
 
 	function onLogoutEvent()
@@ -1035,7 +1007,7 @@ do
 
 	function onChannelClose(channel)
 		if not _script.ready then return end
-		toggleCriticalMode(true)
+		
 
 		if _script.channel and tonumber(_script.channel) == tonumber(channel) then
 			openConsole()
@@ -1067,26 +1039,26 @@ do
 		elseif _script.historyChannel and tonumber(_script.historyChannel) == tonumber(channel) then
 			_script.historyChannel = nil
 		end
-		toggleCriticalMode(false)
+		
 	end
 
 	function onPrivateMessage(name, level, message)
 		if not _script.ready then return end
-		toggleCriticalMode(true)
+		
 
 		-- TODO: filter spam
 		-- TODO: alarm and red text for configurable words
 		if _script.historyChannel then
 			xeno.luaSendChannelMessage(_script.historyChannel, CHANNEL_ORANGE, name .. ' ['..level..']', message)
 		end
-		toggleCriticalMode(false)
+		
 	end
 
 	function onNpcMessage(name, message)
 		if not _script.ready then return end
-		toggleCriticalMode(true)
+		
 		checkEvents(EVENT_NPC, message, name)
-		toggleCriticalMode(false)
+		
 	end
 
 	function onContainerChange(index, title, id)
@@ -1096,9 +1068,9 @@ do
 		-- on RL Tibia we artificially delay this time for safety reasons
 		local delay = xeno.isRealTibia() == 1 and pingDelay(DELAY.CONTAINER_WAIT) or 0
 		setTimeout(function()
-			toggleCriticalMode(true)
+			
 			checkEvents(EVENT_CONTAINER, index, title, id)
-			toggleCriticalMode(false)
+			
 		end, delay)
 	end
 
