@@ -115,6 +115,7 @@
 		<item text="Stand (33096, 31700, 6)" tag="1"/>
 		<item text="No-Outdoors:" tag="255"/>
 		<item text="Stand (33099, 31699, 7)" tag="1"/>
+		<item text="insideCave:" tag="255"/>
 		<item text="Node (33097, 31693, 8)" tag="0"/>
 		<item text="Node (33097, 31685, 8)" tag="0"/>
 		<item text="Node (33091, 31678, 8)" tag="0"/>
@@ -198,6 +199,13 @@
 		<item text="Node (33091, 31678, 8)" tag="0"/>
 		<item text="Node (33097, 31685, 8)" tag="0"/>
 		<item text="Node (33097, 31693, 8)" tag="0"/>
+		<item text="huntcheck|Outdoors|No-Outdoors:" tag="255"/>
+		<item text="No-Outdoors:" tag="255"/>
+		<item text="huntcheck|2:" tag="255"/>
+		<item text="huntstart|2:" tag="255"/>
+		<item text="Walker.Goto('insideCave')" tag="254"/>
+		<item text="huntexit|2:" tag="255"/>
+		<item text="Outdoors:" tag="255"/>
 		<item text="Node (33098, 31698, 8)" tag="0"/>
 		<item text="Stand (33099, 31699, 8)" tag="1"/>
 		<item text="huntcheck|1:" tag="255"/>
