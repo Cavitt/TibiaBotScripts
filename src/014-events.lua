@@ -872,7 +872,7 @@ do
 		    -- Check rings & amulets
 		    if supply.group == 'Ring' or supply.group == 'Amulet' and supply.options then
 
-		        local targets = supply.options['Creatures']
+		        local targets = supply.options['Creatures'] or {}
 		        		         
 		        -- Count only monsters in the config
                 local creatures = 0 -- Moved into the loops to fix a bug. Remember to remove the earlier definition.
