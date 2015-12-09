@@ -397,11 +397,10 @@
 </panel>
 <panel name="Special Areas">
 	<control name="AreaList">
-		<item title="Special Area #1" consider="3" width="1" height="3" x="33108" y="32404" z="13"/>
-		<item title="Special Area #2" consider="3" width="3" height="4" x="33071" y="32364" z="13"/>
-		<item title="Special Area #3" consider="3" width="4" height="3" x="33087" y="32381" z="13"/>
-		<item title="Special Area #4" consider="3" width="3" height="1" x="33105" y="32417" z="13"/>
-		<item title="Special Area #5" consider="3" width="3" height="3" x="33069" y="32408" z="13"/>
+		<item title="Special Area #1" consider="3" width="3" height="4" x="33071" y="32364" z="13"/>
+		<item title="Special Area #2" consider="3" width="4" height="3" x="33087" y="32381" z="13"/>
+		<item title="Special Area #3" consider="3" width="3" height="3" x="33069" y="32408" z="13"/>
+		<item title="Special Area #4" consider="3" width="1" height="1" x="33110" y="32407" z="13"/>
 	</control>
 </panel>
 <panel name="Alarms">
