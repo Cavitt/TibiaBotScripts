@@ -32,8 +32,6 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|bank~tools:", "tag": 255},
-  {"label": "Node (33017, 32059, 7)", "tag": 0},
-  {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33012, 32053, 6)", "tag": 0},
   {"label": "Node (33005, 32053, 6)", "tag": 0},
   {"label": "Node (32998, 32053, 6)", "tag": 0},
@@ -165,8 +163,6 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|bank~boat:", "tag": 255},
-  {"label": "Node (33017, 32059, 7)", "tag": 0},
-  {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33016, 32054, 6)", "tag": 0},
   {"label": "Node (33006, 32053, 6)", "tag": 0},
   {"label": "Node (32994, 32053, 6)", "tag": 0},
@@ -383,8 +379,6 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|bank~runes:", "tag": 255},
-  {"label": "Node (33017, 32059, 7)", "tag": 0},
-  {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33011, 32053, 6)", "tag": 0},
   {"label": "Node (33001, 32053, 6)", "tag": 0},
   {"label": "Node (32993, 32053, 6)", "tag": 0},
@@ -647,8 +641,6 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|bank~potions:", "tag": 255},
-  {"label": "Node (33017, 32059, 7)", "tag": 0},
-  {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33011, 32053, 6)", "tag": 0},
   {"label": "Node (33001, 32053, 6)", "tag": 0},
   {"label": "Node (32993, 32053, 6)", "tag": 0},
@@ -1006,8 +998,6 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|bank~soft.boots:", "tag": 255},
-  {"label": "Node (33017, 32059, 7)", "tag": 0},
-  {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33007, 32053, 6)", "tag": 0},
   {"label": "Node (32995, 32053, 6)", "tag": 0},
   {"label": "Node (32985, 32053, 6)", "tag": 0},
@@ -1275,8 +1265,6 @@
   {"label": "end:", "tag": 255},
         
   {"label": "venore|bank~temple:", "tag": 255},
-  {"label": "Node (33017, 32059, 7)", "tag": 0},
-  {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33015, 32054, 6)", "tag": 0},
   {"label": "Node (33007, 32055, 6)", "tag": 0},
   {"label": "Node (33006, 32063, 6)", "tag": 0},
@@ -1310,8 +1298,6 @@
 
 
   {"label": "venore|bank~bank:", "tag": 255},
-  {"label": "Node (33017, 32059, 7)", "tag": 0},
-  {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33019, 32054, 6)", "tag": 0},
   {"label": "Stand (33019, 32054, 6)", "tag": 1},
   {"label": "end:", "tag": 255},
@@ -1671,8 +1657,6 @@
   {"label": "end:", "tag": 255},
          
   {"label": "venore|bank~depot:", "tag": 255},
-  {"label": "Node (33017, 32059, 7)", "tag": 0},
-  {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33019, 32058, 6)", "tag": 0},
   {"label": "Stand (33020, 32059, 6)", "tag": 1},
   {"label": "Stand (33019, 32060, 7)", "tag": 1},          
@@ -2138,8 +2122,6 @@
   {"label": "end:", "tag": 255},
         
   {"label": "venore|bank~ammo:", "tag": 255},
-  {"label": "Node (33017, 32059, 7)", "tag": 0},
-  {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33016, 32055, 6)", "tag": 0},
   {"label": "Node (33007, 32054, 6)", "tag": 0},
   {"label": "Node (33006, 32061, 6)", "tag": 0},
@@ -2397,8 +2379,6 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|bank~west.gate:", "tag": 255},
-  {"label": "Node (33017, 32059, 7)", "tag": 0},
-  {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33006, 32053, 6)", "tag": 0},
   {"label": "Node (32996, 32053, 6)", "tag": 0},
   {"label": "Node (32986, 32053, 6)", "tag": 0},
@@ -2710,8 +2690,6 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|bank~south.gate:", "tag": 255},
-  {"label": "Node (33017, 32059, 7)", "tag": 0},
-  {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33007, 32054, 6)", "tag": 0},
   {"label": "Node (33006, 32063, 6)", "tag": 0},
   {"label": "Node (33006, 32070, 6)", "tag": 0},
@@ -2958,8 +2936,6 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|bank~north.gate:", "tag": 255},
-  {"label": "Node (33017, 32059, 7)", "tag": 0},
-  {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33013, 32053, 6)", "tag": 0},
   {"label": "Node (33005, 32053, 6)", "tag": 0},
   {"label": "Node (32995, 32053, 6)", "tag": 0},
@@ -3192,8 +3168,6 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|bank~food:", "tag": 255},
-  {"label": "Node (33017, 32059, 7)", "tag": 0},
-  {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33014, 32053, 6)", "tag": 0},
   {"label": "Node (33005, 32053, 6)", "tag": 0},
   {"label": "Node (32995, 32053, 6)", "tag": 0},
@@ -3625,8 +3599,6 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|bank~trainers:", "tag": 255},
-  {"label": "Node (33017, 32059, 7)", "tag": 0},
-  {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33015, 32054, 6)", "tag": 0},
   {"label": "Node (33005, 32053, 6)", "tag": 0},
   {"label": "Node (32994, 32053, 6)", "tag": 0},
@@ -3941,8 +3913,6 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|bank~east.gate:", "tag": 255},
-  {"label": "Node (33017, 32059, 7)", "tag": 0},
-  {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33014, 32054, 6)", "tag": 0},
   {"label": "Node (33007, 32054, 6)", "tag": 0},
   {"label": "Node (33006, 32062, 6)", "tag": 0},
@@ -4268,8 +4238,6 @@
   {"label": "end:", "tag": 255},
         
   {"label": "venore|bank~loot.yanni:", "tag": 255},
-  {"label": "Node (33017, 32059, 7)", "tag": 0},
-  {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33016, 32055, 6)", "tag": 0},
   {"label": "Node (33007, 32054, 6)", "tag": 0},
   {"label": "Node (33006, 32061, 6)", "tag": 0},
@@ -4552,8 +4520,6 @@
   {"label": "end:", "tag": 255},
         
   {"label": "venore|bank~loot.romella:", "tag": 255},
-  {"label": "Node (33017, 32059, 7)", "tag": 0},
-  {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33016, 32055, 6)", "tag": 0},
   {"label": "Node (33007, 32054, 6)", "tag": 0},
   {"label": "Node (33006, 32061, 6)", "tag": 0},
