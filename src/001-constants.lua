@@ -1429,6 +1429,18 @@ local TRAVEL_ROUTES = {
 			['Lorek'] = {'hi', 'banuta', 'yes'}
 		}
 	},
+	['lorek~mountain'] = {
+		cost = 0,
+		transcript = {
+			['Lorek'] = {'hi', 'mountain', 'yes'}
+		}
+	},
+	['mountain~forbidden lands'] = {
+		cost = 0,
+		transcript = {
+			['The Blind Prophet'] = {'hi', 'transport', 'yes'}
+		}
+	},
 	['liberty bay~meriana'] = {
 		cost = 0,
 		transcript = {
@@ -1782,7 +1794,10 @@ local SPAWN_TRAVELLING = {
 	['yalahar quaras (ms)'] = 50,
 	['yalahar quaras (ed)'] = 50,
 	['yalahar quaras (rp)'] = 50,
-	['banuta -2 (ek)'] = 50
+	['banuta -2 (ek)'] = 50,
+	['forbidden lands behemoths (ms)'] = 50,
+	['forbidden lands behemoths (ed)'] = 50,
+	['forbidden lands behemoths (rp)'] = 50
 }
 
 local MONSTER_LOOT = {
