@@ -8,7 +8,6 @@
 		<item spell="Exura" mana="20" vcomp="0" vsign="1" vrandom="0" vvalue="85" enabled="1"/>
 	</control>
 	<control name="ItemList">
-		<item id="266" vcomp="0" vsign="1" vrandom="0" vvalue="50" enabled="1"/>
 		<item id="268" vcomp="0" vsign="3" vrandom="0" vvalue="50" enabled="1"/>
 	</control>
 </panel>
