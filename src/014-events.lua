@@ -59,7 +59,8 @@ do
 
 	local LABEL_ACTIONS = {
 		-- Player & Supply Check [huntcheck|id]
-		['huntcheck'] = function(group, id, failLabel, skipSupplyCheck)
+		['huntcheck'] = function(group, id, failLabel, skipSupplyCheck, skipState)
+			skipState = skipState == 'true'
 			skipSupplyCheck = skipSupplyCheck == 'true'
 			local state = 'Hunting'
 			local route = '--'
@@ -159,7 +160,7 @@ do
 			end
 			if not route then route = '--' end
 			-- Update script state
-			if _config['HUD']['Enabled'] then
+			if not skipState and _config['HUD']['Enabled'] then
 				_script.state = state;
 				-- We don't currently have a route
 				if _script.route == '--' then
