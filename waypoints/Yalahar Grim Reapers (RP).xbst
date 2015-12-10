@@ -96,7 +96,9 @@
 		<item text="Node (32812, 31057, 8)" tag="0"/>
 		<item text="Node (32808, 31056, 8)" tag="0"/>
 		<item text="Node (32802, 31058, 8)" tag="0"/>
+		<item text="huntcheck|Level-Spy-Check|No-Level-Spy-Check|false|true:" tag="255"/>
 		<item text="spy|-1|nil|4|7|nightmare,nightmare scion:" tag="255"/>
+		<item text="No-Level-Spy-Check:" tag="255"/>
 		<item text="Node (32799, 31058, 8)" tag="0"/>
 		<item text="Stand (32798, 31058, 8)" tag="1"/>
 		<item text="Node (32794, 31057, 7)" tag="0"/>
@@ -112,7 +114,9 @@
 		<item text="Node (32786, 31062, 8)" tag="0"/>
 		<item text="Node (32783, 31060, 8)" tag="0"/>
 		<item text="huntcheck|Second-Hole-Second-Floor|No-Second-Hole-Second-Floor:" tag="255"/>
+		<item text="huntcheck|Level-Spy-Check|No-Level-Spy-Check|false|true:" tag="255"/>
 		<item text="spy|1|No-Second-Hole-Second-Floor:" tag="255"/>
+		<item text="No-Level-Spy-Check:" tag="255"/>
 		<item text="Stand (32783, 31059, 8)" tag="1"/>
 		<item text="Node (32781, 31063, 9)" tag="0"/>
 		<item text="Node (32778, 31067, 9)" tag="0"/>
@@ -156,7 +160,9 @@
 		<item text="No-Second-Hole-Second-Floor:" tag="255"/>
 		<item text="Node (32784, 31053, 8)" tag="0"/>
 		<item text="Node (32784, 31050, 8)" tag="0"/>
+		<item text="huntcheck|Level-Spy-Check|No-Level-Spy-Check|false|true:" tag="255"/>
 		<item text="spy|-1|nil|4|7|nightmare,nightmare scion:" tag="255"/>
+		<item text="No-Level-Spy-Check:" tag="255"/>
 		<item text="Stand (32784, 31049, 8)" tag="1"/>
 		<item text="Node (32788, 31049, 7)" tag="0"/>
 		<item text="Node (32791, 31049, 7)" tag="0"/>
@@ -170,7 +176,9 @@
 		<item text="Node (32812, 31044, 8)" tag="0"/>
 		<item text="Node (32809, 31043, 8)" tag="0"/>
 		<item text="huntcheck|Third-Hole-Second-Floor|No-Third-Hole-Second-Floor:" tag="255"/>
+		<item text="huntcheck|Level-Spy-Check|No-Level-Spy-Check|false|true:" tag="255"/>
 		<item text="spy|1|No-Third-Hole-Second-Floor:" tag="255"/>
+		<item text="No-Level-Spy-Check:" tag="255"/>
 		<item text="Stand (32808, 31043, 8)" tag="1"/>
 		<item text="Node (32805, 31047, 9)" tag="0"/>
 		<item text="Stand (11111, 11111, 1)" tag="1"/>
@@ -207,7 +215,9 @@
 		<item text="Stand (32808, 31043, 9)" tag="1"/>
 		<item text="No-Third-Hole-Second-Floor:" tag="255"/>
 		<item text="Node (32802, 31044, 8)" tag="0"/>
+		<item text="huntcheck|Level-Spy-Check|No-Level-Spy-Check|false|true:" tag="255"/>
 		<item text="spy|-1|nil|4|7|nightmare,nightmare scion:" tag="255"/>
+		<item text="No-Level-Spy-Check:" tag="255"/>
 		<item text="Node (32799, 31044, 8)" tag="0"/>
 		<item text="Stand (32798, 31044, 8)" tag="1"/>
 		<item text="Node (32791, 31044, 7)" tag="0"/>
@@ -223,7 +233,9 @@
 		<item text="Node (32788, 31023, 8)" tag="0"/>
 		<item text="Node (32785, 31023, 8)" tag="0"/>
 		<item text="huntcheck|Fourth-Hole-Second-Floor|No-Fourth-Hole-Second-Floor:" tag="255"/>
+		<item text="huntcheck|Level-Spy-Check|No-Level-Spy-Check|false|true:" tag="255"/>
 		<item text="spy|1|No-Fourth-Hole-Second-Floor:" tag="255"/>
+		<item text="No-Level-Spy-Check:" tag="255"/>
 		<item text="Stand (32784, 31023, 8)" tag="1"/>
 		<item text="Node (32788, 31026, 9)" tag="0"/>
 		<item text="Node (32792, 31032, 9)" tag="0"/>
@@ -272,7 +284,9 @@
 		<item text="Node (32786, 31028, 8)" tag="0"/>
 		<item text="Node (32786, 31032, 8)" tag="0"/>
 		<item text="Node (32786, 31035, 8)" tag="0"/>
+		<item text="huntcheck|Level-Spy-Check|No-Level-Spy-Check|false|true:" tag="255"/>
 		<item text="spy|-1|nil|4|7|nightmare,nightmare scion:" tag="255"/>
+		<item text="No-Level-Spy-Check:" tag="255"/>
 		<item text="Stand (32785, 31035, 8)" tag="1"/>
 		<item text="No-Fourth-Hole:" tag="255"/>
 		<item text="huntcheck|Fifth-Hole|No-Fifth-Hole:" tag="255"/>
@@ -284,7 +298,9 @@
 		<item text="Node (32809, 31032, 8)" tag="0"/>
 		<item text="Node (32809, 31030, 8)" tag="0"/>
 		<item text="huntcheck|Fifth-Hole-Second-Floor|No-Fifth-Hole-Second-Floor:" tag="255"/>
+		<item text="huntcheck|Level-Spy-Check|No-Level-Spy-Check|false|true:" tag="255"/>
 		<item text="spy|1|No-Fifth-Hole-Second-Floor:" tag="255"/>
+		<item text="No-Level-Spy-Check:" tag="255"/>
 		<item text="Stand (32809, 31029, 8)" tag="1"/>
 		<item text="Node (32815, 31030, 9)" tag="0"/>
 		<item text="Node (32822, 31031, 9)" tag="0"/>
@@ -323,7 +339,9 @@
 		<item text="Stand (32809, 31029, 9)" tag="1"/>
 		<item text="No-Fifth-Hole-Second-Floor:" tag="255"/>
 		<item text="Node (32802, 31030, 8)" tag="0"/>
+		<item text="huntcheck|Level-Spy-Check|No-Level-Spy-Check|false|true:" tag="255"/>
 		<item text="spy|-1|nil|4|7|nightmare,nightmare scion:" tag="255"/>
+		<item text="No-Level-Spy-Check:" tag="255"/>
 		<item text="Node (32799, 31030, 8)" tag="0"/>
 		<item text="Stand (32798, 31030, 8)" tag="1"/>
 		<item text="Node (32793, 31031, 7)" tag="0"/>
