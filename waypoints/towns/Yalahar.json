@@ -969,23 +969,19 @@
   {"label": "end:", "tag": 255},
   
   {"label": "yalahar|runes~runes:", "tag": 255},
-  {"label": "Node (32798, 31246, 7)", "tag": 0},
-  {"label": "Stand (32797, 31246, 7)", "tag": 1},
+  {"label": "Stand (32789, 31238, 5)", "tag": 1},
   {"label": "end:", "tag": 255},
   
   {"label": "yalahar|potions~potions:", "tag": 255},
-  {"label": "Node (32798, 31246, 7)", "tag": 0},
-  {"label": "Stand (32797, 31246, 7)", "tag": 1},
+  {"label": "Stand (32789, 31238, 5)", "tag": 1},
   {"label": "end:", "tag": 255},
   
   {"label": "yalahar|potions~runes:", "tag": 255},
-  {"label": "Node (32798, 31246, 7)", "tag": 0},
-  {"label": "Stand (32797, 31246, 7)", "tag": 1},
+  {"label": "Stand (32789, 31238, 5)", "tag": 1},
   {"label": "end:", "tag": 255},
   
   {"label": "yalahar|runes~potions:", "tag": 255},
-  {"label": "Node (32798, 31246, 7)", "tag": 0},
-  {"label": "Stand (32797, 31246, 7)", "tag": 1},
+  {"label": "Stand (32789, 31238, 5)", "tag": 1},
   {"label": "end:", "tag": 255},
   
   {"label": "yalahar|trainers~trainers:", "tag": 255},
