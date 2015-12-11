@@ -61,21 +61,23 @@ Hud = (function()
 		local currentAxisY = leftcolumn.y
 		local currentAxisX = leftcolumn.x
 
-		-- Update container hud
-		local containers = hudGetContainerDimensions()
-		local containerNames = {} -- by index
-		for name, index in pairs(_backpacks) do
-			containerNames[index+1] = name
-			-- Remove missing containers
-			if not xeno.getContainerOpen(index) then
-				xeno.HUDUpdateLocation(containerHud[index+1], -100, -100)
+		if _config['HUD']['Show-Containers'] then
+			-- Update container hud
+			local containers = hudGetContainerDimensions()
+			local containerNames = {} -- by index
+			for name, index in pairs(_backpacks) do
+				containerNames[index+1] = name
+				-- Remove missing containers
+				if not xeno.getContainerOpen(index) then
+					xeno.HUDUpdateLocation(containerHud[index+1], -100, -100)
+				end
 			end
-		end
-		for id, container in pairs(containers) do
-			local pointer = containerHud[id]
-			local name = id == 1 and 'Main' or containerNames[id] or ''
-			xeno.HUDUpdateTextText(pointer, name)
-			xeno.HUDUpdateLocation(pointer, container.x + 15, container.y - 12)
+			for id, container in pairs(containers) do
+				local pointer = containerHud[id]
+				local name = id == 1 and 'Main' or containerNames[id] or ''
+				xeno.HUDUpdateTextText(pointer, name)
+				xeno.HUDUpdateLocation(pointer, container.x + 15, container.y - 12)
+			end
 		end
 
 		-- Loop through all panels in the column
