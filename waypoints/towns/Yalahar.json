@@ -869,11 +869,6 @@
   {"label": "Stand (32777, 31247, 5)", "tag": 1},
   {"label": "end:", "tag": 255},
   
-  {"label": "yalahar|ammo~ammo:", "tag": 255},
-  {"label": "Node (32798, 31246, 7)", "tag": 0},
-  {"label": "Stand (32797, 31246, 7)", "tag": 1},
-  {"label": "end:", "tag": 255},
-  
   {"label": "yalahar|ammo~runes:", "tag": 255},
   {"label": "Stand (32789, 31239, 3)", "tag": 1},
   {"label": "Stand (32790, 31239, 4)", "tag": 1},
@@ -4136,6 +4131,10 @@
   {"label": "Stand (32789, 31239, 6)", "tag": 1},
   {"label": "Stand (32790, 31239, 5)", "tag": 1},
   {"label": "Stand (32789, 31239, 4)", "tag": 1},
+  {"label": "Stand (32789, 31238, 3)", "tag": 1},
+  {"label": "end:", "tag": 255},
+  
+  {"label": "yalahar|ammo~ammo:", "tag": 255},
   {"label": "Stand (32789, 31238, 3)", "tag": 1},
   {"label": "end:", "tag": 255},
   
