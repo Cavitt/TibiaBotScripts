@@ -84,11 +84,15 @@
 		<item text="Node (33111, 32485, 8)" tag="0"/>
 		<item text="Node (33107, 32483, 8)" tag="0"/>
 		<item text="Node (33098, 32483, 8)" tag="0"/>
+		<item text="Node (33116, 32483, 7)" tag="0"/>
+		<item text="Hole (33115, 32483, 7)" tag="4"/>
 		<item text="Node (33096, 32490, 8)" tag="0"/>
 		<item text="Node (33096, 32495, 8)" tag="0"/>
 		<item text="Node (33096, 32500, 8)" tag="0"/>
 		<item text="Node (33101, 32500, 8)" tag="0"/>
 		<item text="Node (33105, 32500, 8)" tag="0"/>
+		<item text="Node (33116, 32483, 7)" tag="0"/>
+		<item text="Hole (33115, 32483, 7)" tag="4"/>
 		<item text="Node (33110, 32500, 8)" tag="0"/>
 		<item text="Node (33110, 32494, 8)" tag="0"/>
 		<item text="Node (33114, 32491, 8)" tag="0"/>
