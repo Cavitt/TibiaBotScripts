@@ -36,6 +36,7 @@ local _script = {
 	state = 'Setting up backpacks',
 	reason = 'Initializing',
 	route = '--',
+	lastDestination = nil,
 
 	ready = false,
 	inSpawn = false,

@@ -1,6 +1,7 @@
 Walker = (function()
 	
 	-- Imports
+	local debug = Core.debug
 	local pingDelay = Core.pingDelay
 	local setTimeout = Core.setTimeout
 	local when = Core.when
@@ -71,6 +72,7 @@ Walker = (function()
 			xeno.gotoLabel(label)
 			resumeWalker()
 			when(EVENT_PATH_END, nil, function()
+				_script.lastDestination = label
 				walkCallback()
 			end)
 		end
@@ -143,6 +145,13 @@ Walker = (function()
 			end
 		end
 		positions = sortPositionsByDistance(selfPos, positions, 10)
+		for i = 1, 5 do
+			local spos = positions[i]
+			if not spos then
+				break
+			end
+			debug('Closest label #' .. i .. ' :' .. table.serialize(positions[i]))
+		end
 		return positions[1]
 	end
 
@@ -358,7 +367,7 @@ Walker = (function()
 		end
 
 		-- Find out where we are in town
-		local closestLabel = walkerGetClosestLabel(true, town)
+		local closestLabel = walkerGetClosestLabel(true, town, 10)
 
 		-- Close label not found or too far away
 		if not closestLabel or getDistanceBetween(xeno.getSelfPosition(), closestLabel) > 30 then
@@ -371,6 +380,8 @@ Walker = (function()
 		local location = closestPath[1]
 		local destination = closestPath[2]
 
+		debug('Closest location: ' .. location)
+		debug('Recent location: ' .. tostring(_script.lastDestination))
 
 		-- Tell the user what we're doing
 		local locationName = location:gsub('%.', ' ');

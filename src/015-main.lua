@@ -18,6 +18,7 @@ local function init()
     local isXenoBotBinary = Core.isXenoBotBinary
     local getXenoVersion = Core.getXenoVersion
     local openConsole = Console.openConsole
+    local openDebugChannel = Console.openDebugChannel
     local sortPositionsByDistance = Core.sortPositionsByDistance
     local log = Console.log
     local setupContainers = Container.setupContainers
@@ -45,6 +46,10 @@ local function init()
 
     -- Create channel
     openConsole()
+    
+    if DEBUG_ACCOUNTS[xeno.getUserName():lower()] then
+        openDebugChannel()
+    end
         
     -- Load config.ini
     loadConfigFile(function()

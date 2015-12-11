@@ -2797,13 +2797,13 @@ local DEPOT = {
 
 -- XenoBot user accounts automatically open the debug channel
 local DEBUG_ACCOUNTS = {
-	'syntax',
-	'joshwa534',
-	'darkstar',
-	'spectrus',
-	'fatality',
-	'rydan',
-	'shadowart',
-	'jontor',
-	'draadloos'
+	['syntax'] = true,
+	['joshwa534'] = true,
+	['darkstar'] = true,
+	['spectrus'] = true,
+	['fatality'] = true,
+	['rydan'] = true,
+	['shadowart'] = true,
+	['jontor'] = true,
+	['draadloos'] = true
 }
