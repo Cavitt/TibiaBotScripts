@@ -72,7 +72,8 @@ Walker = (function()
 			xeno.gotoLabel(label)
 			resumeWalker()
 			when(EVENT_PATH_END, nil, function()
-				_script.lastDestination = label
+				debug('Reached destination: ' .. destination)
+				_script.lastDestination = destination
 				walkCallback()
 			end)
 		end
@@ -315,7 +316,8 @@ Walker = (function()
 		targetTown = targetTown:lower()
 
 		local selfPos = xeno.getSelfPosition()
-		local lastDestLabel = _script.lastDestination
+		local lastDest = _script.lastDestination
+		local lastDestLabel = lastDest and ('%s|%s~depot'):format(targetTown, lastDest)
 		local lastDestPos = lastDestLabel and walkerGetPosAfterLabel(lastDestLabel)
 		local labelList = nil
 		local closestLabel = nil
@@ -331,7 +333,7 @@ Walker = (function()
 			for i = 1, #labelList do
 				local tmpLabel = labelList[i]
 				if tmpLabel.name == ('%s|depot~depot'):format(town) then
-					if getDistanceBetween(selfPos, tmpLabel) <= 30 then
+					if getDistanceBetween(selfPos, tmpLabel) <= 20 then
 						closestLabel = tmpLabel
 						break
 					end
@@ -386,7 +388,7 @@ Walker = (function()
 						return
 					-- Reached the target town
 					else
-						callback(closestLabel)
+						callback({name=('%s|%s~%s'):format(town, startLocation, travelMethod)})
 					end
 				end)
 			end)
@@ -443,9 +445,9 @@ Walker = (function()
 		walkerGotoTown(town, function(closestLabel)
 			local closestRoute = split(closestLabel.name, '|')
 			local closestPath = split(closestRoute[2], '~')
-			local location = closestPath[1]
+			local lastDestination = closestPath[2]
 			-- Walk to path
-			walkerStartPath(town, location, destination, function(path)
+			walkerStartPath(town, lastDestination, destination, function(path)
 				callback(path)
 			end)
 		end)
