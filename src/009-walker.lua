@@ -386,7 +386,7 @@ Walker = (function()
 						return
 					-- Reached the target town
 					else
-						callback()
+						callback(closestLabel)
 					end
 				end)
 			end)
