@@ -152,7 +152,7 @@ Walker = (function()
 			end
 			debug('Closest label #' .. i .. ' :' .. table.serialize(positions[i]))
 		end
-		return positions[1]
+		return positions[1], positions
 	end
 
 	local function walkerVerifyPosition(label, option)
@@ -311,16 +311,42 @@ Walker = (function()
 
 	local function walkerGotoTown(targetTown, callback)
 		local townPositions = sortPositionsByDistance(xeno.getSelfPosition(), TOWN_POSITIONS)
-		local town = townPositions[1].name
+		local town = townPositions[1].name:lower()
+		targetTown = targetTown:lower()
+
+		local selfPos = xeno.getSelfPosition()
+		local lastDestLabel = _script.lastDestination
+		local lastDestPos = lastDestLabel and walkerGetPosAfterLabel(lastDestLabel)
+		local labelList = nil
+		local closestLabel = nil
+
+		-- Close to last known destination
+		if lastDestPos and getDistanceBetween(selfPos, lastDestPos) <= 30 then
+			closestLabel = lastDestPos
+			closestLabel.name = lastDestLabel
+		-- Find out where we are in town
+		else
+			-- Update label, override if we find depot is close
+			closestLabel, labelList = walkerGetClosestLabel(true, town, 10)
+			for i = 1, #labelList do
+				local tmpLabel = labelList[i]
+				if tmpLabel.name == ('%s|depot~depot'):format(town) then
+					if getDistanceBetween(selfPos, tmpLabel) <= 30 then
+						closestLabel = tmpLabel
+						break
+					end
+				end
+			end
+		end
 
 		-- In town, return success
-		if (string.lower(town) == string.lower(targetTown)) then
-			callback()
+		if (town == targetTown) then
+			callback(closestLabel)
 			return
 		end
 
 		-- Out of town, detect travel costs
-		local route = string.lower(town) .. '~' .. string.lower(targetTown)
+		local route = town .. '~' .. targetTown
 		local travelInfo = TRAVEL_ROUTES[route]
 
 		-- Travel path doesn't exist, prompt user to walk manually
@@ -352,11 +378,11 @@ Walker = (function()
 					local newTownPositions = sortPositionsByDistance(xeno.getSelfPosition(), TOWN_POSITIONS)
 					local newTown = newTownPositions[1].name:lower()
 					-- Not in the new town yet, recurse
-					if newTown ~= targetTown:lower() then
+					if newTown ~= targetTown then
 						walkerGotoTown(targetTown, callback)
 					-- Didn't leave the last town
-					elseif newTown == town:lower() then
-						error('Failed to travel to ' .. targetTown:lower() .. ' from ' .. newTown .. '.')
+					elseif newTown == town then
+						error('Failed to travel to ' .. targetTown .. ' from ' .. newTown .. '.')
 						return
 					-- Reached the target town
 					else
@@ -366,11 +392,8 @@ Walker = (function()
 			end)
 		end
 
-		-- Find out where we are in town
-		local closestLabel = walkerGetClosestLabel(true, town, 10)
-
 		-- Close label not found or too far away
-		if not closestLabel or getDistanceBetween(xeno.getSelfPosition(), closestLabel) > 30 then
+		if not closestLabel or getDistanceBetween(selfPos, closestLabel) > 30 then
 			error('Too far from any start point. Restart the script closer to a town.')
 			return
 		end
@@ -381,11 +404,11 @@ Walker = (function()
 		local destination = closestPath[2]
 
 		debug('Closest location: ' .. location)
-		debug('Recent location: ' .. tostring(_script.lastDestination))
+		debug('Recent location: ' .. tostring(lastDestLabel))
 
 		-- Tell the user what we're doing
 		local locationName = location:gsub('%.', ' ');
-		log('You are near the ' .. town:lower() .. ' ' .. locationName .. ', traveling to ' .. targetTown:lower() .. '.')
+		log('You are near the ' .. town .. ' ' .. locationName .. ', traveling to ' .. targetTown:lower() .. '.')
 
 		-- Needs gold to travel, go to bank from here
 		local travelCostDifference = travelCost - getMoney()
@@ -417,9 +440,7 @@ Walker = (function()
 
 	local function walkerGotoLocation(town, destination, callback)
 		-- Make sure we're in the right town
-		walkerGotoTown(town, function()
-			-- Find out where we are
-			local closestLabel = walkerGetClosestLabel(true, string.lower(town))
+		walkerGotoTown(town, function(closestLabel)
 			local closestRoute = split(closestLabel.name, '|')
 			local closestPath = split(closestRoute[2], '~')
 			local location = closestPath[1]
