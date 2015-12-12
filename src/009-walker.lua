@@ -388,7 +388,7 @@ Walker = (function()
 						return
 					-- Reached the target town
 					else
-						callback({name=('%s|%s~%s'):format(town, startLocation, travelMethod)})
+						callback({name=('%s|%s~depot'):format(town, travelMethod)})
 					end
 				end)
 			end)
@@ -445,9 +445,9 @@ Walker = (function()
 		walkerGotoTown(town, function(closestLabel)
 			local closestRoute = split(closestLabel.name, '|')
 			local closestPath = split(closestRoute[2], '~')
-			local lastDestination = closestPath[2]
+			local start = closestPath[1]
 			-- Walk to path
-			walkerStartPath(town, lastDestination, destination, function(path)
+			walkerStartPath(town, start, destination, function(path)
 				callback(path)
 			end)
 		end)
