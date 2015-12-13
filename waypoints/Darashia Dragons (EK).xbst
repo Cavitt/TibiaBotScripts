@@ -77,7 +77,7 @@
 		<item text="doorCheck1:" tag="255"/>
 		<item text="Node (33265, 32279, 7)" tag="0"/>
 		<item text="Stand (33265, 32279, 7)" tag="1"/>
-		<item text="Self.UseDoor(33265, 32278, 7) wait(500) Self.Step(NORTH) wait(500) Walker.ConditionalGoto((Self.Position().y >= 32278), 'doorCheck1')" tag="254"/>
+		<item text="Self.UseDoor(33265, 32278, 7) wait(500) Self.Step(NORTH) wait(1000) Walker.ConditionalGoto((Self.Position().y >= 32278), 'doorCheck1')" tag="254"/>
 		<item text="Stand (33265, 32276, 7)" tag="1"/>
 		<item text="Stand (33263, 32275, 8)" tag="1"/>
 		<item text="Stand (33259, 32275, 9)" tag="1"/>
@@ -151,7 +151,7 @@
 		<item text="Stand (33265, 32276, 8)" tag="1"/>
 		<item text="doorCheck2:" tag="255"/>
 		<item text="Stand (33265, 32277, 7)" tag="1"/>
-		<item text="Self.UseDoor(33265, 32278, 7) wait(500) Self.Step(SOUTH) wait(500) Walker.ConditionalGoto((Self.Position().y <= 32278), 'doorCheck2')" tag="254"/>
+		<item text="Self.UseDoor(33265, 32278, 7) wait(500) Self.Step(SOUTH) wait(1000) Walker.ConditionalGoto((Self.Position().y <= 32278), 'doorCheck2')" tag="254"/>
 		<item text="Node (33261, 32290, 7)" tag="0"/>
 		<item text="Node (33255, 32303, 7)" tag="0"/>
 		<item text="Node (33249, 32317, 7)" tag="0"/>
