@@ -73,15 +73,23 @@ Container = (function()
 		-- Go back in source container
 		if sDepth > 0 then
 			xeno.containerBack(source)
-			whenContainerUpdates(source, function()
-				resetContainerDepths(source, destination, sDepth-1, dDepth, callback)
+			whenContainerUpdates(source, function(success)
+				if success then
+					resetContainerDepths(source, destination, sDepth-1, dDepth, callback)
+				else
+					resetContainerDepths(source, destination, sDepth, dDepth, callback)
+				end
 			end)
 
 		-- Go back in destination container
 		elseif dDepth > 0 then
 			xeno.containerBack(destination)
-			whenContainerUpdates(destination, function()
-				resetContainerDepths(source, destination, sDepth, dDepth-1, callback)
+			whenContainerUpdates(destination, function(success)
+				if success then
+					resetContainerDepths(source, destination, sDepth, dDepth-1, callback)
+				else
+					resetContainerDepths(source, destination, sDepth, dDepth, callback)
+				end
 			end)
 		-- Return
 		elseif callback then
@@ -288,12 +296,9 @@ Container = (function()
 					end)
 					return
 				end
-				-- Open destination container
-				debug('containerMoveItems: open destination')
-				xeno.containerUseItem(toContainer, toSlot, not openWindow, true)
 
 				local targetContainer = openWindow and getLastContainer() or toContainer
-				whenContainerUpdates(targetContainer, function()
+				local function processCascade()
 					-- Update toContainer index if we opened in a new window
 					if openWindow then
 						toContainer = targetContainer
@@ -329,8 +334,18 @@ Container = (function()
 						if moveInterval then
 							clearTimeout(moveInterval)
 						end
-					end)		
+					end)
 					return
+				end
+
+				debug('containerMoveItems: open destination')
+				xeno.containerUseItem(toContainer, toSlot, not openWindow, true)
+				whenContainerUpdates(targetContainer, function(success)
+					if success then
+						processCascade()
+					else
+						onContainerFull() -- retry
+					end
 				end)
 			end, DELAY.CONTAINER_MOVE_ITEM)
 		end
@@ -719,10 +734,17 @@ Container = (function()
 			-- Not done, keep counting backwards
 			else
 				-- Navigate back a level
-				local ret = xeno.containerBack(index)
-				whenContainerUpdates(index, function()
-					countLevel(level-1)
-				end)
+				local function goBack()
+					xeno.containerBack(index)
+					whenContainerUpdates(index, function(success)
+						if not success then
+							goBack()
+							return
+						end
+						countLevel(level-1)
+					end)
+				end
+				goBack()
 			end
 			return nil
 		end
@@ -732,8 +754,12 @@ Container = (function()
 			-- Another cascade, go deeper
 			if xeno.isItemContainer(cascadeID) then
 				xeno.containerUseItem(index, lastSlot, true, true)
-				whenContainerUpdates(index, function()
-					gotoBottom(depth + 1)
+				whenContainerUpdates(index, function(success)
+					if not success then
+						gotoBottom(depth)
+					else
+						gotoBottom(depth + 1)
+					end
 				end)
 				return
 			end
