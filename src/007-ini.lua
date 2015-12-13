@@ -167,7 +167,8 @@ Ini = (function()
 							end
 
 							-- Add item to supplies list
-							_supplies[id] = {
+							local index = sectionName == 'Spells' and name or id
+							_supplies[index] = {
 								name = name,
 								id = id,
 								group = sectionName,

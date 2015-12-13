@@ -197,9 +197,11 @@ Settings = (function()
 		local maxMana = xeno.getSelfMaxMana()
 
 		-- Loop through supplies, add Runes and Spells to the list.
-		for supplyid, supply in pairs(_supplies) do
+		for _, supply in pairs(_supplies) do
 			-- Belongs to the correct section, and has shooter settings
 			if supply.group == 'Spells' or supply.group == 'Runes' and supply.options then
+				local supplyid = supply.id
+
 				-- Titlecase monsters incase the user didn't
 				local targets = supply.options['Targets']
 				if type(targets) == 'table' then
