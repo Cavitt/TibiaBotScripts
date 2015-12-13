@@ -167,7 +167,7 @@
 		<item text="Node (32948, 32613, 7)" tag="0"/>
 		<item text="Node (32948, 32619, 7)" tag="0"/>
 		<item text="Node (32955, 32618, 7)" tag="0"/>
-		<item text="Walker.Goto('routeConnection'):" tag="254"/>
+		<item text="Walker.Goto('routeConnection')" tag="254"/>
 		<item text="afterTransport:" tag="255"/>
 		<item text="Node (33021, 32580, 6)" tag="0"/>
 		<item text="Stand (33021, 32580, 6)" tag="1"/>
