@@ -86,7 +86,7 @@ Depot = (function()
 					openDepot(callback)
 					return
 				end
-				
+
 				-- Callback with container list index
 				depot = getContainerByName(CONT_NAME_DEPOT)
 				callback(depot)
@@ -111,12 +111,14 @@ Depot = (function()
 				[3043] = true,
 				-- Tools
 				[ITEMID.OBSIDIAN_KNIFE] = true,
-				[ITEMID.BLESSED_STAKE] = true,
+				[ITEMID.BLESSED_STAKE] = true
 			},
 			filter = function(item)
 				if slot == DEPOT.SLOT_STACK and xeno.isItemStackable(item.id) then
 					return true
 				elseif slot == DEPOT.SLOT_NONSTACK and not xeno.isItemStackable(item.id) then
+					return true
+				elseif slot == DEPOT.SLOT_SUPPLY and _supplies[item.id] then
 					return true
 				end
 				return false
@@ -336,22 +338,25 @@ Depot = (function()
 				setTimeout(function()
 					-- Deposit non-stackables
 					transferToDepot(depot, DEPOT.SLOT_NONSTACK, function()
-						-- We need to withdraw, delay and withdraw
-						if neededSupplies then
-							setTimeout(function()
-								-- Withdraw supplies
-								transferFromDepot(depot, neededSupplies, function()
-									-- Set depot state
-									_script.depotOpen = false
-									callback()
-								end)
-							end, DELAY.CONTAINER_MOVE_ITEM)
-						-- Nothing left
-						else
-							-- Set depot state
-							_script.depotOpen = false
-							callback()
-						end
+						-- Deposit supplies
+						transferToDepot(depot, DEPOT.SLOT_SUPPLY, function()
+							-- We need to withdraw, delay and withdraw
+							if neededSupplies then
+								setTimeout(function()
+									-- Withdraw supplies
+									transferFromDepot(depot, neededSupplies, function()
+										-- Set depot state
+										_script.depotOpen = false
+										callback()
+									end)
+								end, DELAY.CONTAINER_MOVE_ITEM)
+							-- Nothing left
+							else
+								-- Set depot state
+								_script.depotOpen = false
+								callback()
+							end
+						end)
 					end)
 				end, DELAY.CONTAINER_MOVE_ITEM)
 			end)

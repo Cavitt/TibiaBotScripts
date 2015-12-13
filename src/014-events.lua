@@ -450,13 +450,13 @@ do
 				useMech()
 			elseif param1 == 'PythiusMug' then
 				delayWalker()
-				local mugs = getTotalItemCount(2903)
+				local mugs = getTotalItemCount(ITEMID.GOLDEN_MUG)
 				local dialog = {'HI', 'MISSION', 'UNDEAD', 'TREASURE', 'YES', 'OFFER', 'YES', 'GOLDEN MUG'}
 				walkerReachNPC('Pythius the Rotten', function()
 					talk(dialog, function()
 						setTimeout(function()
 							resumeWalker()
-							if getTotalItemCount(2903) <= mugs then
+							if getTotalItemCount(ITEMID.GOLDEN_MUG) <= mugs then
 								xeno.gotoLabel('special|PrePythiusMug')
 							end
 						end, pingDelay(DELAY.RANGE_TALK))
