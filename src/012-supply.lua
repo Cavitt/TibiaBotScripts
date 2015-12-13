@@ -14,6 +14,7 @@ Supply = (function()
 	local getContainerItemCounts = Container.getContainerItemCounts
 	local cleanContainers = Container.cleanContainers
 	local getTotalItemCount = Container.getTotalItemCount
+	local getMoney = Container.getMoney
 	local getFlaskWeight = Container.getFlaskWeight
 	local hudItemUpdate = Hud.hudItemUpdate
 	local bankDepositGold = Npc.bankDepositGold
@@ -464,17 +465,6 @@ Supply = (function()
 
 		-- Step 2) Detected money to deposit AND we need to do step 3 OTHERWISE skip to step 4
 		if step < 2 then
-			-- Deep count if gold backpack is not the main backpack
-			local deepCount = false
-			if _backpacks['Gold'] ~= _backpacks['Main'] then
-				deepCount = true
-			end
-
-			-- Count gold and plat
-			delayWalker()
-			local items = getTotalItemCount({[3031] = true, [3035] = true}, true)
-			resumeWalker()
-
 			-- Loot remaining in loot backpack
 			local depositLoot = false
 			if loot then
@@ -495,17 +485,8 @@ Supply = (function()
 				return
 			end
 
-			-- No items, skip step
-			if not items then
-				resupply(callback, 2, loot)
-				return
-			end
-
-			local gold = items[3031] or 0
-			local plat = items[3035] or 0
-			
-			-- More than one stack of plat or gold
-			if gold > 100 or plat > 100 then
+			local gold = getMoney()
+			if gold > 500 then
 				walkerGotoLocation(_script.town, 'bank', function(path)
 					-- Arrived at bank
 					bankDepositGold(function()
