@@ -667,14 +667,25 @@ do
 
 		-- Change gold (only on Open Tibia)
 		if xeno.isRealTibia() ~= 1 then
+			local mainbp = _backpacks['Main']
 			local goldbp = _backpacks['Gold']
-			for spot = 0, xeno.getContainerItemCount(goldbp) - 1 do
-				local item = xeno.getContainerSpotData(goldbp, spot)
-				if item.count >= 100 and ITEM_LIST_MONEY[item.id] and item.id ~= 3043 then
-					-- Use stack to change gold
-					xeno.containerUseItem(goldbp, spot)
-					-- Stop, we'll get the next one next tick
-					break
+			local backpacks = {goldbp}
+			if mainbp ~= goldbp then
+				backpacks[#backpacks+1] = mainbp
+			end
+			for i = 1, #backpacks do
+				local bp = backpacks[i]
+				local used = false
+				for spot = 0, xeno.getContainerItemCount(bp) - 1 do
+					local item = xeno.getContainerSpotData(bp, spot)
+					if item.count >= 100 and ITEM_LIST_MONEY[item.id] and item.id ~= 3043 then
+						-- Use stack to change gold
+						xeno.containerUseItem(bp, spot)
+						-- Stop, we'll get the next one next tick
+						used = true
+						break
+					end
+					if used then break end
 				end
 			end
 		end
