@@ -885,10 +885,36 @@ Container = (function()
 		-- Loop through each slot in the loot container
 		-- If loot is a "rusty" item, use oil on it.
 		-- Wait x delay and look at the same slot.
-		-- If loot is shitty, toss it out. (offset slot in loop)
-		-- If loot is good, continue (add to supplies)
-		-- Remove rusty armor from supplies (HUD)
-		-- Add oil as supply waste (HUD)
+		--ITEM_LIST_RUSTYARMORS
+		local rustRemoverSlot = nil
+		local supplybp = _backpacks['Supplies']
+		for spot = 0, xeno.getContainerItemCount(supplybp) - 1 do
+			local item = xeno.getContainerSpotData(supplybp, spot)
+			if item.id == ITEMID.RUST_REMOVER then
+				rustRemoverSlot = spot
+				break
+			end
+		end
+
+		if rustRemoverSlot then
+			local lootbp = _backpacks['Loot']
+			for spot = 0, xeno.getContainerItemCount(lootbp) - 1 do
+				local item = xeno.getContainerSpotData(lootbp, spot)
+				if ITEM_LIST_RUSTYARMORS[item.id] then
+					-- TODO: Remove rusty armor from supplies (HUD)
+					-- TODO: Add oil as supply waste (HUD)
+					xeno.containerUseWithContainer(supplybp, rustRemoverSlot, lootbp, spot)
+					setTimeout(function()
+						-- If loot is shitty, toss it out.
+						local unrusted = xeno.getContainerSpotData(lootbp, spot)
+						if ITEM_LIST_RUSTYTRASH[unrusted.id] then
+							-- throw out
+						end
+					end, pingDelay(DELAY.CONTAINER_USEWITH))
+					break
+				end
+			end
+		end
 	end
 
 	-- Export global functions

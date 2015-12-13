@@ -114,11 +114,12 @@ Depot = (function()
 				[ITEMID.BLESSED_STAKE] = true
 			},
 			filter = function(item)
-				if slot == DEPOT.SLOT_STACK and xeno.isItemStackable(item.id) then
+				local supplyItem = _supplies[item.id]
+				if slot == DEPOT.SLOT_STACK and xeno.isItemStackable(item.id) and not supplyItem then
 					return true
-				elseif slot == DEPOT.SLOT_NONSTACK and not xeno.isItemStackable(item.id) then
+				elseif slot == DEPOT.SLOT_NONSTACK and not xeno.isItemStackable(item.id) and not supplyItem then
 					return true
-				elseif slot == DEPOT.SLOT_SUPPLY and _supplies[item.id] then
+				elseif slot == DEPOT.SLOT_SUPPLY and supplyItem then
 					return true
 				end
 				return false
