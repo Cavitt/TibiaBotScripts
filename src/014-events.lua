@@ -36,6 +36,7 @@ do
 	local getTotalItemCount = Container.getTotalItemCount
 	local setupContainers = Container.setupContainers
 	local whenContainerUpdates = Container.whenContainerUpdates
+	local unrustLoot = Container.unrustLoot
 	local hudUpdateDimensions = Hud.hudUpdateDimensions
 	local hudUpdatePositions = Hud.hudUpdatePositions
 	local hudItemUpdate = Hud.hudItemUpdate
@@ -720,6 +721,9 @@ do
 				end
 			end
 		end
+
+		-- Unruster
+		unrustLoot()
 
 		-- Script crashed, safely walk to exit
 		if _script.crashed then

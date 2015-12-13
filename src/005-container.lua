@@ -6,6 +6,7 @@ Container = (function()
 	local clearWhen = Core.clearWhen
 	local setTimeout = Core.setTimeout
 	local setInterval = Core.setInterval
+	local getWalkableTiles = Core.getWalkableTiles
 	local when = Core.when
 	local formatList = Core.formatList
 	local debug = Core.debug
@@ -880,7 +881,7 @@ Container = (function()
 			+ (large * xeno.getItemWeight(283))
 	end
 
-	local function unrustLoot(callback)
+	local function unrustLoot()
 		-- Make sure a corpse is not currently open
 		-- Loop through each slot in the loot container
 		-- If loot is a "rusty" item, use oil on it.
@@ -908,7 +909,14 @@ Container = (function()
 						-- If loot is shitty, toss it out.
 						local unrusted = xeno.getContainerSpotData(lootbp, spot)
 						if ITEM_LIST_RUSTYTRASH[unrusted.id] then
-							-- throw out
+							-- Get random position
+							local pos = xeno.getSelfPosition()
+							local tiles = getWalkableTiles(pos, 3)
+							if not tiles or #tiles < 1 then
+								tiles = {pos}
+							end
+							local destination = tiles[math.random(1, #tiles)]
+							xeno.containerMoveItemToGround(lootbp, spot, destination.x, destination.y, destination.z, -1)
 						end
 					end, pingDelay(DELAY.CONTAINER_USEWITH))
 					break
@@ -930,6 +938,7 @@ Container = (function()
 		getTotalItemCount = getTotalItemCount,
 		getMoney = getMoney,
 		getFlasks = getFlasks,
-		getFlaskWeight = getFlaskWeight
+		getFlaskWeight = getFlaskWeight,
+		unrustLoot = unrustLoot
 	}
 end)()

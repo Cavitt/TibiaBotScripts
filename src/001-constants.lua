@@ -2578,8 +2578,20 @@ local ITEM_LIST_ACTIVE_RINGS = {
 local ITEM_LIST_RUSTYARMORS = {
 	[8895] = true,
 	[8896] = true,
+	[8897] = true,
 	[8898] = true,
 	[8899] = true
+}
+
+local ITEM_LIST_RUSTYTRASH = {
+	[3557] = true,
+	[3372] = true,
+	[3558] = true,
+	[3362] = true,
+	[3358] = true,
+	[3377] = true,
+	[3357] = true,
+	[3359] = true
 }
 
 local ITEM_LIST_MONEY = {
