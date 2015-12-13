@@ -774,16 +774,34 @@ do
 				_snapbacks = _snapbacks + 1
 				-- If snapbacks are at 5 or more, assume an invisible monster is blocking
 				if _snapbacks >= 5 then
-					-- TODO: free account alternative (wait for "You must learn this spell first" or "You need a premium account" error message)
-					if _script.vocation == 'Paladin' then
-						cast('exori san')
-					elseif _script.vocation == 'Knight' then
-						cast('exori')
-					else
-						cast('exori frigo')
+					if _config['General']['Invis-Anti-Stuck'] then
+						local pvpsafe = true
+						for i = CREATURES_LOW, CREATURES_HIGH do
+							local cpos = xeno.getCreaturePosition(i)
+							local distance = getDistanceBetween(pos, cpos)
+							-- Same or 1 floor away, 2sqms away
+							if math.abs(pos.z - cpos.z) <= 1 and distance <= 2 then
+								-- Normal creature checks
+								if xeno.getCreatureVisible(i) and xeno.getCreatureHealthPercent(i) > 0 and xeno.isCreaturePlayer(i) then
+									pvpsafe = false
+								end
+							end
+						end
+
+						-- TODO: free account alternative (wait for "You must learn this spell first" or "You need a premium account" error message)
+						if pvpsafe then
+							if _script.vocation == 'Paladin' then
+								cast('exori san')
+							elseif _script.vocation == 'Knight' then
+								cast('exori')
+							else
+								cast('exori frigo')
+							end
+						end
 					end
 					_snapbacks = 0
 				end
+
 			end
 		end
 
