@@ -2786,7 +2786,8 @@ local NORMAL_BOOTS = {
 	[9017] = true,
 	[3556] = true,
 	[3552] = true,
-	[3551] = true
+	[3551] = true,
+	[21981] = true
 }
 
 local DEPOT = {
