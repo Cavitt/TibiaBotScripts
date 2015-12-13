@@ -178,7 +178,7 @@
 		<item text="beforeTeleport:" tag="255"/>
 		<item text="Node (33218, 32390, 9)" tag="0"/>
 		<item text="Stand (33218, 32390, 9)" tag="1"/>
-		<item text="Self.Step(NORTH) wait(500, 800) Walker.ConditionalGoto((Self.Position().z == 8), 'spawnexit' 'beforeTeleport')" tag="254"/>
+		<item text="Self.Step(NORTH) wait(500, 800) Walker.ConditionalGoto((Self.Position().z == 8), 'spawnexit', 'beforeTeleport')" tag="254"/>
 		<item text="huntstart|7:" tag="255"/>
 		<item text="Node (33211, 32400, 9)" tag="0"/>
 		<item text="Node (33205, 32398, 9)" tag="0"/>
