@@ -122,8 +122,10 @@ do
 				local needSoftbootRepair = not skipSupplyCheck and (_config['Soft Boots']['Mana-Percent'] > 0 and getTotalItemCount(ITEMID.SOFTBOOTS_WORN) > 0) or false
 				-- Resupply
 				if _script.returnQueued or supplies.min or lowCap or needSoftbootRepair then
-					state = 'Walking to exit'
-					log('Returning to ' .. _script.town .. ' to ' .. (needSoftbootRepair and 'repair soft boots.' or 're-supply.') .. (_script.returnQueued and ' [forced]' or ''))
+					if _script.state ~= 'Walking to exit' then
+						state = 'Walking to exit'
+						log('Returning to ' .. _script.town .. ' to ' .. (needSoftbootRepair and 'repair soft boots.' or 're-supply.') .. (_script.returnQueued and ' [forced]' or ''))
+					end
 					-- Clean backpacks
 					cleanContainers(_backpacks['Loot'], ITEM_LIST_SKINNABLE_LOOT, nil, true)
 					-- Route system
