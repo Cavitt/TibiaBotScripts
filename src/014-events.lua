@@ -461,7 +461,7 @@ do
 					talk(dialog, function()
 						setTimeout(function()
 							resumeWalker()
-							if getTotalItemCount(ITEMID.GOLDEN_MUG) <= mugs then
+							if getTotalItemCount(ITEMID.GOLDEN_MUG) >= mugs then
 								xeno.gotoLabel('special|PrePythiusMug')
 							end
 						end, pingDelay(DELAY.RANGE_TALK))
