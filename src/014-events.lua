@@ -456,7 +456,7 @@ do
 			elseif param1 == 'PythiusMug' then
 				delayWalker()
 				local mugs = getTotalItemCount(ITEMID.GOLDEN_MUG)
-				local dialog = {'HI', 'MISSION', 'UNDEAD', 'TREASURE', 'YES', 'OFFER', 'YES', 'GOLDEN MUG'}
+				local dialog = {'hi', 'offer', 'yes', 'golden mug'}
 				walkerReachNPC('Pythius the Rotten', function()
 					talk(dialog, function()
 						setTimeout(function()
