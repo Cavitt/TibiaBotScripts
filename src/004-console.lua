@@ -35,7 +35,8 @@ Console = (function()
 		xeno.setWalkerEnabled(false)
 		xeno.setTargetingEnabled(false)
 		xeno.setLooterEnabled(false)
-		assert(false, message)
+		print(message)
+		_script.crashed = true
 	end
 
 	local function prompt(message, callback)

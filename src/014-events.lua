@@ -22,6 +22,7 @@ do
 	local getPositionFromDirection = Core.getPositionFromDirection
 	local getDistanceBetween = Core.getDistanceBetween
 	local getSelfName = Core.getSelfName
+	local sortPositionsByDistance = Core.sortPositionsByDistance
 	local cast = Core.cast
 	local cureConditions = Core.cureConditions
 	local checkSoftBoots = Core.checkSoftBoots
@@ -51,6 +52,7 @@ do
 	local walkerUseClosestItem = Walker.walkerUseClosestItem
 	local walkerCapacityDrop = Walker.walkerCapacityDrop
 	local walkerRestoreMana = Walker.walkerRestoreMana
+	local walkerGotoLocation = Walker.walkerGotoLocation
 	local walkerTravel = Walker.walkerTravel
 	local setDynamicSettings = Settings.setDynamicSettings
 	local checkAllSupplyThresholds = Supply.checkAllSupplyThresholds
@@ -718,6 +720,20 @@ do
 				end
 			end
 		end
+
+		-- Script crashed, safely walk to exit
+		if _script.crashed then
+			_script.crashed = nil
+			local msg = 'Walking to depot to stop script.'
+			local townPositions = sortPositionsByDistance(xeno.getSelfPosition(), TOWN_POSITIONS)
+			local town = townPositions[1].name:lower()
+			log(msg)
+			print(msg)
+			xeno.setWalkerEnabled(true)
+			walkerGotoLocation(town, 'depot', function()
+				assert(false, msg)
+			end)
+		end
 	end
 
 	function onLabel(name)
@@ -833,8 +849,6 @@ do
 
 			end
 		end
-
-		
 	end
 
 	function onLootMessage(message)
@@ -888,9 +902,7 @@ do
 		if _battleMsgRunning then return end
 		if not _script.ready then return end
 
-		_battleMsgRunning = true
-
-		
+		_battleMsgRunning = true	
 
 		-- What should we equip/un-equip (slot=itemid)
 		local equip = {}
@@ -996,7 +1008,6 @@ do
 		-- Do not check if the script is event ready
 		-- prompts are needed beforehand
 		
-
 		-- First character is slash, command is expected
 		if string.sub(message, 1, 1) == '/' then
 			-- Clear last console message, so we can repeat ourselves
