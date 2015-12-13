@@ -542,25 +542,27 @@ Container = (function()
 
 			-- Create itemid list for each supply group
 			for itemid, supply in pairs(_supplies) do
-				-- Amulets and Rings always go in the Supplies backpack
-				local name = supply.group
-				if name == 'Amulet' or name == 'Ring' then
-					name = 'Supplies'
-				end
-				-- Send to Main backpack list if it matches the index
-				local backpack = _backpacks[name]
-				if backpack then
-					if backpack == _backpacks['Main'] then
-						name = 'Main'
+				if itemid ~= ITEMID.GOLDEN_MUG then
+					-- Amulets and Rings always go in the Supplies backpack
+					local name = supply.group
+					if name == 'Amulet' or name == 'Ring' then
+						name = 'Supplies'
 					end
-					-- Init table if it doesn't exist
-					if not itemLists[backpack] then
-						itemLists[backpack] = {}
-						-- Add backpack to index for easy iteration
-						destinations[#destinations+1] = {name, backpack}
+					-- Send to Main backpack list if it matches the index
+					local backpack = _backpacks[name]
+					if backpack then
+						if backpack == _backpacks['Main'] then
+							name = 'Main'
+						end
+						-- Init table if it doesn't exist
+						if not itemLists[backpack] then
+							itemLists[backpack] = {}
+							-- Add backpack to index for easy iteration
+							destinations[#destinations+1] = {name, backpack}
+						end
+						-- Add supply item to the list
+						itemLists[backpack][itemid] = true
 					end
-					-- Add supply item to the list
-					itemLists[backpack][itemid] = true
 				end
 			end
 
