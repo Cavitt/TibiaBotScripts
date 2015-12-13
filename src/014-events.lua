@@ -316,8 +316,10 @@ do
 						false)
 					-- Threshold met, stop timer and start walker
 					if not threshold[1] then
-						clearTimeout(_script.antiLureCheckInterval)
-						_script.antiLureCheckInterval = nil
+						if _script.antiLureCheckInterval then
+							clearTimeout(_script.antiLureCheckInterval)
+							_script.antiLureCheckInterval = nil
+						end
 						resumeWalker()
 					end
 				end, waitTime and tonumber(waitTime) or 30000)
@@ -472,6 +474,31 @@ do
 
 	function onTick()
 		if not _script.ready then return end
+
+		-- Backpacks were closed, we just logged in.
+		if not _script.openingContainers and not xeno.getContainerOpen(0) then
+			local inProtectionZone = xeno.getSelfFlag('inpz')
+			-- Disable walker, looter, and targeter
+			delayWalker()
+			xeno.setLooterEnabled(false)
+			xeno.setTargetingEnabled(false)
+			-- If in PZ, we enable after we setup containers
+			resetContainers(function()
+				if inProtectionZone then
+					resumeWalker()
+					xeno.setLooterEnabled(true)
+					xeno.setTargetingEnabled(true)
+				end
+			end)
+			-- Otherwise, we wait 10 seconds
+			if not inProtectionZone then
+				setTimeout(function()
+					resumeWalker()
+					xeno.setLooterEnabled(true)
+					xeno.setTargetingEnabled(true)
+				end, 10000)
+			end
+		end
 
 		-- Check and execute timers
 		checkTimers()
@@ -1056,34 +1083,8 @@ do
 	function onChannelClose(channel)
 		if not _script.ready then return end
 		
-
 		if _script.channel and tonumber(_script.channel) == tonumber(channel) then
 			openConsole()
-			-- Backpacks were closed, we just logged in.
-			if not xeno.getContainerOpen(0) then
-				local inProtectionZone = xeno.getSelfFlag('inpz')
-				-- Disable walker, looter, and targeter
-				delayWalker()
-				xeno.setLooterEnabled(false)
-				xeno.setTargetingEnabled(false)
-				-- If in PZ, we enable after we setup containers
-				resetContainers(function()
-					if inProtectionZone then
-						resumeWalker()
-						xeno.setLooterEnabled(true)
-						xeno.setTargetingEnabled(true)
-					end
-				end)
-				-- Otherwise, we wait 10 seconds
-				if not inProtectionZone then
-					setTimeout(function()
-						resumeWalker()
-						xeno.setLooterEnabled(true)
-						xeno.setTargetingEnabled(true)
-					end, 10000)
-				end
-			end
-
 		elseif _script.historyChannel and tonumber(_script.historyChannel) == tonumber(channel) then
 			_script.historyChannel = nil
 		end

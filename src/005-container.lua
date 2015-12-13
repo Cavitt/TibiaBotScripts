@@ -11,6 +11,7 @@ Container = (function()
 	local debug = Core.debug
 	local log = Console.log
 	local info = Console.info
+	local error = Console.error
 	local prompt = Console.prompt
 
 	local function getLastContainer()
@@ -405,21 +406,16 @@ Container = (function()
 		-- Retry attempts
 		tries = tries or 3
 
-		-- Open
-		local opened = xeno.slotUseItem(3)
-
 		-- Wait for Main Backpack
-		whenContainerUpdates(0, function()
-			-- Success
-			if opened > 0 then
+		xeno.slotUseItem(3)
+		whenContainerUpdates(0, function(success)
+			if success then
 				if _config['General']['Minimize-Backpacks'] then
 					xeno.minimizeContainer(0)
 				end
 				callback(true)
-			-- Fail, out of retries
 			elseif tries <= 0 then
-				callback(false)
-			-- Fail, recurse
+				error('Unable to open main backpack. Check your equipment slot.')
 			else
 				tries = tries - 1
 				openMainBackpack(callback, tries)
@@ -428,6 +424,8 @@ Container = (function()
 	end
 
 	local function resetContainers(callback)
+		_script.openingContainers = true
+
 		-- Close all containers
 		for i = 0, 16 do
 			xeno.closeContainer(i)
@@ -435,15 +433,20 @@ Container = (function()
 
 		local minimizeBackpacks = _config['General']['Minimize-Backpacks']
 		openMainBackpack(function()
+			_script.openingContainers = nil
 			local backpacks = {}
 			local function openChild(index)
 				local spot = backpacks[index]
 				local newcontainer = getLastContainer() + 1
-				-- Open child backpack
-				xeno.containerUseItem(0, spot, false, true)
 
 				-- Wait for child to open
-				whenContainerUpdates(newcontainer, function()
+				xeno.containerUseItem(0, spot, false, true)
+				whenContainerUpdates(newcontainer, function(success)
+					if not success then
+						openChild(index)
+						return
+					end
+
 					-- Minimize all containers
 					if minimizeBackpacks then
 						for i = 1, 16 do
@@ -468,6 +471,7 @@ Container = (function()
 				local item = xeno.getContainerSpotData(0, spot)
 				if xeno.isItemContainer(item.id) then
 					backpacks[#backpacks+1] = spot
+					debug('resetContainers - found bp: ' .. spot)
 				end
 			end
 
