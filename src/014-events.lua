@@ -665,7 +665,19 @@ do
 			hudUpdatePositions()
 		end
 
-		
+		-- Change gold (only on Open Tibia)
+		if xeno.isRealTibia() ~= 1 then
+			local goldbp = _backpacks['Gold']
+			for spot = 0, xeno.getContainerItemCount(goldbp) - 1 do
+				local item = xeno.getContainerSpotData(goldbp, spot)
+				if item.count >= 100 and ITEM_LIST_MONEY[item.id] and item.id ~= 3043 then
+					-- Use stack to change gold
+					xeno.containerUseItem(goldbp, spot)
+					-- Stop, we'll get the next one next tick
+					break
+				end
+			end
+		end
 	end
 
 	function onLabel(name)
