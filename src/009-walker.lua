@@ -73,7 +73,7 @@ Walker = (function()
 			resumeWalker()
 			when(EVENT_PATH_END, nil, function()
 				debug('Reached destination: ' .. destination)
-				_script.lastDestination = destination
+				_script.lastDestination = {name=destination, town=town}
 				walkCallback()
 			end)
 		end
@@ -317,7 +317,7 @@ Walker = (function()
 
 		local selfPos = xeno.getSelfPosition()
 		local lastDest = _script.lastDestination
-		local lastDestLabel = lastDest and ('%s|%s~depot'):format(targetTown, lastDest)
+		local lastDestLabel = lastDest and ('%s|%s~depot'):format(lastDest.town, lastDest.name)
 		local lastDestPos = lastDestLabel and walkerGetPosAfterLabel(lastDestLabel)
 		local labelList = nil
 		local closestLabel = nil
