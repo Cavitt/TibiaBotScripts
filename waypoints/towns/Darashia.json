@@ -66,6 +66,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "darashia|depot~boat:", "tag": 255},
+  {"label": "Node (33213, 32454, 7)", "tag": 0},
+  {"label": "Stand (33213, 32455, 7)", "tag": 1},
   {"label": "Node (33214, 32456, 8)", "tag": 0},
   {"label": "Stand (33214, 32455, 8)", "tag": 1},
   {"label": "Node (33217, 32449, 7)", "tag": 0},
@@ -313,6 +315,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "darashia|depot~depot:", "tag": 255},
+  {"label": "Node (33213, 32454, 7)", "tag": 0},
+  {"label": "Stand (33213, 32455, 7)", "tag": 1},
   {"label": "Node (33214, 32461, 8)", "tag": 0},
   {"label": "Stand (33214, 32461, 8)", "tag": 1},
   {"label": "end:", "tag": 255},
@@ -546,6 +550,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "darashia|depot~bank:", "tag": 255},
+  {"label": "Node (33213, 32454, 7)", "tag": 0},
+  {"label": "Stand (33213, 32455, 7)", "tag": 1},
   {"label": "Node (33214, 32456, 8)", "tag": 0},
   {"label": "Stand (33214, 32455, 8)", "tag": 1},
   {"label": "Node (33216, 32449, 7)", "tag": 0},
@@ -720,6 +726,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "darashia|depot~carpet:", "tag": 255},
+  {"label": "Node (33213, 32454, 7)", "tag": 0},
+  {"label": "Stand (33213, 32455, 7)", "tag": 1},
   {"label": "Node (33214, 32456, 8)", "tag": 0},
   {"label": "Stand (33214, 32455, 8)", "tag": 1},
   {"label": "Node (33217, 32448, 7)", "tag": 0},
@@ -925,6 +933,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "darashia|depot~potions:", "tag": 255},
+  {"label": "Node (33213, 32454, 7)", "tag": 0},
+  {"label": "Stand (33213, 32455, 7)", "tag": 1},
   {"label": "Node (33214, 32456, 8)", "tag": 0},
   {"label": "Stand (33214, 32455, 8)", "tag": 1},
   {"label": "Node (33215, 32449, 7)", "tag": 0},
@@ -1086,6 +1096,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "darashia|depot~runes:", "tag": 255},
+  {"label": "Node (33213, 32454, 7)", "tag": 0},
+  {"label": "Stand (33213, 32455, 7)", "tag": 1},
   {"label": "Node (33214, 32456, 8)", "tag": 0},
   {"label": "Stand (33214, 32455, 8)", "tag": 1},
   {"label": "Node (33215, 32449, 7)", "tag": 0},
@@ -1227,6 +1239,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "darashia|depot~temple:", "tag": 255},
+  {"label": "Node (33213, 32454, 7)", "tag": 0},
+  {"label": "Stand (33213, 32455, 7)", "tag": 1},
   {"label": "Node (33214, 32456, 8)", "tag": 0},
   {"label": "Stand (33214, 32455, 8)", "tag": 1},
   {"label": "Stand (33212, 32453, 7)", "tag": 1},
@@ -1462,6 +1476,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "darashia|depot~ammo:", "tag": 255},
+  {"label": "Node (33213, 32454, 7)", "tag": 0},
+  {"label": "Stand (33213, 32455, 7)", "tag": 1},
   {"label": "Node (33214, 32456, 8)", "tag": 0},
   {"label": "Stand (33214, 32455, 8)", "tag": 1},
   {"label": "Node (33216, 32449, 7)", "tag": 0},
@@ -1605,6 +1621,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "darashia|depot~loot.azil:", "tag": 255},
+  {"label": "Node (33213, 32454, 7)", "tag": 0},
+  {"label": "Stand (33213, 32455, 7)", "tag": 1},
   {"label": "Node (33214, 32456, 8)", "tag": 0},
   {"label": "Stand (33214, 32455, 8)", "tag": 1},
   {"label": "Node (33216, 32449, 7)", "tag": 0},
@@ -1747,6 +1765,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "darashia|depot~loot.habdel:", "tag": 255},
+  {"label": "Node (33213, 32454, 7)", "tag": 0},
+  {"label": "Stand (33213, 32455, 7)", "tag": 1},
   {"label": "Node (33214, 32456, 8)", "tag": 0},
   {"label": "Stand (33214, 32455, 8)", "tag": 1},
   {"label": "Node (33216, 32448, 7)", "tag": 0},
@@ -1851,6 +1871,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "darashia|depot~trainers:", "tag": 255},
+  {"label": "Node (33213, 32454, 7)", "tag": 0},
+  {"label": "Stand (33213, 32455, 7)", "tag": 1},
   {"label": "Node (33214, 32456, 8)", "tag": 0},
   {"label": "Stand (33214, 32455, 8)", "tag": 1},
   {"label": "Node (33216, 32448, 7)", "tag": 0},
@@ -1912,6 +1934,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "darashia|depot~north.exit:", "tag": 255},
+  {"label": "Node (33213, 32454, 7)", "tag": 0},
+  {"label": "Stand (33213, 32455, 7)", "tag": 1},
   {"label": "Node (33214, 32456, 8)", "tag": 0},
   {"label": "Stand (33214, 32455, 8)", "tag": 1},
   {"label": "Node (33217, 32447, 7)", "tag": 0},
@@ -2062,6 +2086,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "darashia|depot~west.exit:", "tag": 255},
+  {"label": "Node (33213, 32454, 7)", "tag": 0},
+  {"label": "Stand (33213, 32455, 7)", "tag": 1},
   {"label": "Node (33214, 32456, 8)", "tag": 0},
   {"label": "Stand (33214, 32455, 8)", "tag": 1},
   {"label": "Node (33213, 32449, 7)", "tag": 0},
@@ -2229,6 +2255,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "darashia|depot~south.exit:", "tag": 255},
+  {"label": "Node (33213, 32454, 7)", "tag": 0},
+  {"label": "Stand (33213, 32455, 7)", "tag": 1},
   {"label": "Node (33214, 32456, 8)", "tag": 0},
   {"label": "Stand (33214, 32455, 8)", "tag": 1},
   {"label": "Node (33213, 32450, 7)", "tag": 0},
@@ -2631,6 +2659,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "darashia|depot~food:", "tag": 255},
+  {"label": "Node (33213, 32454, 7)", "tag": 0},
+  {"label": "Stand (33213, 32455, 7)", "tag": 1},
   {"label": "Node (33214, 32456, 8)", "tag": 0},
   {"label": "Stand (33214, 32455, 8)", "tag": 1},
   {"label": "Node (33214, 32450, 7)", "tag": 0},
