@@ -21,6 +21,7 @@ Walker = (function()
 	local prompt = Console.prompt
 	local bankWithdrawGold = Npc.bankWithdrawGold
 	local getMoney = Container.getMoney
+	local getTotalItemCount = Container.getTotalItemCount
 
 	local function walkerLabelExists(label)
 		local waypoints = _settings['Walker']['WaypointList']
@@ -650,6 +651,10 @@ Walker = (function()
 	local function walkerRestoreMana(potionid, manaRestorePercent, callback)
 		local selfid = xeno.getSelfID()
 		local function pump()
+			if getTotalItemCount(potionid) == 0 then
+				return
+			end
+
 			-- Stop if creature onscreen
 			local pos = xeno.getSelfPosition()
 			for i = CREATURES_LOW, CREATURES_HIGH do
