@@ -43,8 +43,8 @@
 	<control name="EnergyCureMana" value="30"/>
 	<control name="EnergyCureEnable" value="0"/>
 	<control name="ParaCureEnable" value="0"/>
-	<control name="ParaCureMana" value="50"/>
-	<control name="ParaCureSpell" value="Utani Hur"/>
+	<control name="ParaCureMana" value="10"/>
+	<control name="ParaCureSpell" value="exura infir ico"/>
 	<control name="HasteCastMana" value="50"/>
 	<control name="HasteCastSpell" value="Utani Hur"/>
 	<control name="HasteCastEnable" value="0"/>
