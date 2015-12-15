@@ -292,7 +292,7 @@ Depot = (function()
 
 		-- Check slots
 		local missingBps = 0
-		for spot = 0, 1 do
+		for spot = 0, 2 do
 			local item = xeno.getContainerSpotData(depot, spot)
 			if not item or not xeno.isItemContainer(item.id) then
 				missingBps = missingBps + 1
