@@ -147,6 +147,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|depot~boat:", "tag": 255},
+  {"label": "Node (33019, 32058, 6)", "tag": 0},
+  {"label": "Stand (33020, 32059, 6)", "tag": 1},
   {"label": "Node (33017, 32059, 7)", "tag": 0},
   {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33016, 32054, 6)", "tag": 0},
@@ -392,6 +394,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|depot~runes:", "tag": 255},
+  {"label": "Node (33019, 32058, 6)", "tag": 0},
+  {"label": "Stand (33020, 32059, 6)", "tag": 1},
   {"label": "Node (33017, 32057, 7)", "tag": 0},
   {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33017, 32055, 6)", "tag": 0},
@@ -654,6 +658,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|depot~potions:", "tag": 255},
+  {"label": "Node (33019, 32058, 6)", "tag": 0},
+  {"label": "Stand (33020, 32059, 6)", "tag": 1},
   {"label": "Node (33017, 32057, 7)", "tag": 0},
   {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33017, 32055, 6)", "tag": 0},
@@ -978,6 +984,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|depot~soft.boots:", "tag": 255},
+  {"label": "Node (33019, 32058, 6)", "tag": 0},
+  {"label": "Stand (33020, 32059, 6)", "tag": 1},
   {"label": "Node (33018, 32057, 7)", "tag": 0},
   {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33016, 32054, 6)", "tag": 0},
@@ -1103,6 +1111,8 @@
   {"label": "end:", "tag": 255},
         
   {"label": "venore|depot~temple:", "tag": 255},
+  {"label": "Node (33019, 32058, 6)", "tag": 0},
+  {"label": "Stand (33020, 32059, 6)", "tag": 1},
   {"label": "Node (33017, 32057, 7)", "tag": 0},
   {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33015, 32054, 6)", "tag": 0},
@@ -1336,7 +1346,9 @@
   {"label": "Stand (33019, 32053, 6)", "tag": 1},
   {"label": "end:", "tag": 255},
              
-  {"label": "venore|depot~bank:", "tag": 255},     
+  {"label": "venore|depot~bank:", "tag": 255},
+  {"label": "Node (33019, 32058, 6)", "tag": 0},
+  {"label": "Stand (33020, 32059, 6)", "tag": 1},
   {"label": "Node (33017, 32057, 7)", "tag": 0},
   {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33019, 32053, 6)", "tag": 0},
@@ -1577,8 +1589,9 @@
   {"label": "Stand (33019, 32053, 6)", "tag": 1},
   {"label": "end:", "tag": 255},
 
-
   {"label": "venore|depot~depot:", "tag": 255},
+  {"label": "Node (33019, 32058, 6)", "tag": 0},
+  {"label": "Stand (33020, 32059, 6)", "tag": 1},
   {"label": "Node (33018, 32054, 7)", "tag": 0},
   {"label": "Stand (33018, 32054, 7)", "tag": 1},
   {"label": "end:", "tag": 255},
@@ -2094,6 +2107,8 @@
   {"label": "end:", "tag": 255},
         
   {"label": "venore|depot~ammo:", "tag": 255},
+  {"label": "Node (33019, 32058, 6)", "tag": 0},
+  {"label": "Stand (33020, 32059, 6)", "tag": 1},
   {"label": "Node (33017, 32057, 7)", "tag": 0},
   {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33016, 32055, 6)", "tag": 0},
@@ -2352,6 +2367,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|depot~west.gate:", "tag": 255},
+  {"label": "Node (33019, 32058, 6)", "tag": 0},
+  {"label": "Stand (33020, 32059, 6)", "tag": 1},
   {"label": "Node (33018, 32057, 7)", "tag": 0},
   {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33015, 32055, 6)", "tag": 0},
@@ -2665,6 +2682,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|depot~south.gate:", "tag": 255},
+  {"label": "Node (33019, 32058, 6)", "tag": 0},
+  {"label": "Stand (33020, 32059, 6)", "tag": 1},
   {"label": "Node (33018, 32057, 7)", "tag": 0},
   {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33015, 32054, 6)", "tag": 0},
@@ -2913,6 +2932,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|depot~north.gate:", "tag": 255},
+  {"label": "Node (33019, 32058, 6)", "tag": 0},
+  {"label": "Stand (33020, 32059, 6)", "tag": 1},
   {"label": "Node (33017, 32057, 7)", "tag": 0},
   {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33015, 32054, 6)", "tag": 0},
@@ -3155,6 +3176,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|depot~food:", "tag": 255},
+  {"label": "Node (33019, 32058, 6)", "tag": 0},
+  {"label": "Stand (33020, 32059, 6)", "tag": 1},
   {"label": "Node (33018, 32057, 7)", "tag": 0},
   {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33014, 32055, 6)", "tag": 0},
@@ -3575,6 +3598,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|depot~trainers:", "tag": 255},
+  {"label": "Node (33019, 32058, 6)", "tag": 0},
+  {"label": "Stand (33020, 32059, 6)", "tag": 1},
   {"label": "Node (33018, 32057, 7)", "tag": 0},
   {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33015, 32054, 6)", "tag": 0},
@@ -3890,6 +3915,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "venore|depot~east.gate:", "tag": 255},
+  {"label": "Node (33019, 32058, 6)", "tag": 0},
+  {"label": "Stand (33020, 32059, 6)", "tag": 1},
   {"label": "Node (33018, 32057, 7)", "tag": 0},
   {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33016, 32055, 6)", "tag": 0},
@@ -4210,6 +4237,8 @@
   {"label": "end:", "tag": 255},
         
   {"label": "venore|depot~loot.yanni:", "tag": 255},
+  {"label": "Node (33019, 32058, 6)", "tag": 0},
+  {"label": "Stand (33020, 32059, 6)", "tag": 1},
   {"label": "Node (33017, 32057, 7)", "tag": 0},
   {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33016, 32055, 6)", "tag": 0},
@@ -4492,6 +4521,8 @@
   {"label": "end:", "tag": 255},
         
   {"label": "venore|depot~loot.romella:", "tag": 255},
+  {"label": "Node (33019, 32058, 6)", "tag": 0},
+  {"label": "Stand (33020, 32059, 6)", "tag": 1},
   {"label": "Node (33017, 32057, 7)", "tag": 0},
   {"label": "Stand (33020, 32059, 7)", "tag": 1},
   {"label": "Node (33016, 32055, 6)", "tag": 0},

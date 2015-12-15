@@ -52,6 +52,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "svargrond|depot~boat:", "tag": 255},
+  {"label": "Node (32275, 31142, 7)", "tag": 0},
+  {"label": "Stand (32274, 31143, 7)", "tag": 1},
   {"label": "Node (32274, 31142, 6)", "tag": 0},
   {"label": "Stand (32274, 31143, 6)", "tag": 1},
   {"label": "Node (32279, 31141, 7)", "tag": 0},
@@ -392,6 +394,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "svargrond|depot~temple:", "tag": 255},
+  {"label": "Node (32275, 31142, 7)", "tag": 0},
+  {"label": "Stand (32274, 31143, 7)", "tag": 1},
   {"label": "Node (32254, 31142, 6)", "tag": 0},
   {"label": "Stand (32254, 31143, 6)", "tag": 1},
   {"label": "Node (32244, 31140, 7)", "tag": 0},
@@ -553,6 +557,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "svargrond|depot~bank:", "tag": 255},
+  {"label": "Node (32275, 31142, 7)", "tag": 0},
+  {"label": "Stand (32274, 31143, 7)", "tag": 1},
   {"label": "Node (32274, 31142, 6)", "tag": 0},
   {"label": "Stand (32274, 31143, 6)", "tag": 1},
   {"label": "Node (32283, 31138, 7)", "tag": 0},
@@ -686,6 +692,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "svargrond|depot~potions:", "tag": 255},
+  {"label": "Node (32275, 31142, 7)", "tag": 0},
+  {"label": "Stand (32274, 31143, 7)", "tag": 1},
   {"label": "Node (32274, 31142, 6)", "tag": 0},
   {"label": "Stand (32274, 31143, 6)", "tag": 1},
   {"label": "Node (32282, 31138, 7)", "tag": 0},
@@ -818,6 +826,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "svargrond|depot~runes:", "tag": 255},
+  {"label": "Node (32275, 31142, 7)", "tag": 0},
+  {"label": "Stand (32274, 31143, 7)", "tag": 1},
   {"label": "Node (32274, 31142, 6)", "tag": 0},
   {"label": "Stand (32274, 31143, 6)", "tag": 1},
   {"label": "Node (32282, 31138, 7)", "tag": 0},
@@ -955,6 +965,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "svargrond|depot~ammo:", "tag": 255},
+  {"label": "Node (32275, 31142, 7)", "tag": 0},
+  {"label": "Stand (32274, 31143, 7)", "tag": 1},
   {"label": "Node (32254, 31142, 6)", "tag": 0},
   {"label": "Stand (32254, 31143, 6)", "tag": 1},
   {"label": "Node (32246, 31141, 7)", "tag": 0},
@@ -1120,6 +1132,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "svargrond|depot~loot:", "tag": 255},
+  {"label": "Node (32275, 31142, 7)", "tag": 0},
+  {"label": "Stand (32274, 31143, 7)", "tag": 1},
   {"label": "Node (32254, 31142, 6)", "tag": 0},
   {"label": "Stand (32254, 31143, 6)", "tag": 1},
   {"label": "Node (32246, 31141, 7)", "tag": 0},
@@ -1304,6 +1318,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "svargrond|depot~trainers:", "tag": 255},
+  {"label": "Node (32275, 31142, 7)", "tag": 0},
+  {"label": "Stand (32274, 31143, 7)", "tag": 1},
   {"label": "Node (32254, 31142, 6)", "tag": 0},
   {"label": "Stand (32254, 31143, 6)", "tag": 1},
   {"label": "Node (32247, 31141, 7)", "tag": 0},
@@ -1463,6 +1479,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "svargrond|depot~carpet:", "tag": 255},
+  {"label": "Node (32275, 31142, 7)", "tag": 0},
+  {"label": "Stand (32274, 31143, 7)", "tag": 1},
   {"label": "Node (32254, 31142, 6)", "tag": 0},
   {"label": "Stand (32254, 31143, 6)", "tag": 1},
   {"label": "Node (32244, 31140, 7)", "tag": 0},
@@ -1675,6 +1693,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "svargrond|depot~food:", "tag": 255},
+  {"label": "Node (32275, 31142, 7)", "tag": 0},
+  {"label": "Stand (32274, 31143, 7)", "tag": 1},
   {"label": "Node (32254, 31142, 6)", "tag": 0},
   {"label": "Stand (32254, 31143, 6)", "tag": 1},
   {"label": "Node (32247, 31141, 7)", "tag": 0},
@@ -1798,6 +1818,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "svargrond|depot~north.exit:", "tag": 255},
+  {"label": "Node (32275, 31142, 7)", "tag": 0},
+  {"label": "Stand (32274, 31143, 7)", "tag": 1},
   {"label": "Node (32255, 31142, 6)", "tag": 0},
   {"label": "Stand (32254, 31143, 6)", "tag": 1},
   {"label": "Node (32250, 31142, 7)", "tag": 0},

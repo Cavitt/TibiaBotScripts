@@ -105,6 +105,10 @@
   {"label": "end:", "tag": 255},
 
   {"label": "port hope|depot~boat:", "tag": 255},
+  {"label": "Node (32625, 32742, 5)", "tag": 0},
+  {"label": "Stand (32626, 32742, 5)", "tag": 1},
+  {"label": "Node (32625, 32748, 6)", "tag": 0},
+  {"label": "Stand (32625, 32749, 6)", "tag": 1},
   {"label": "Node (32621, 32753, 7)", "tag": 0},
   {"label": "Node (32618, 32760, 7)", "tag": 0},
   {"label": "Node (32609, 32762, 7)", "tag": 0},
@@ -270,7 +274,6 @@
   {"label": "Stand (32530, 32784, 6)", "tag": 1},
   {"label": "end:", "tag": 255},
 
-
   {"label": "port hope|south.exit~depot:", "tag": 255}, 
   {"label": "Node (32643, 32791, 7)", "tag": 0},
   {"label": "Node (32637, 32786, 7)", "tag": 0},
@@ -297,8 +300,12 @@
   {"label": "end:", "tag": 255},
 
   {"label": "port hope|depot~depot:", "tag": 255},
-  {"label": "Node (32623, 32742, 7)", "tag": 0},
-  {"label": "Stand (32623, 32742, 7)", "tag": 1},
+  {"label": "Node (32625, 32742, 5)", "tag": 0},
+  {"label": "Stand (32626, 32742, 5)", "tag": 1},
+  {"label": "Node (32625, 32748, 6)", "tag": 0},
+  {"label": "Stand (32625, 32749, 6)", "tag": 1},
+  {"label": "Node (32622, 32742, 7)", "tag": 0},
+  {"label": "Stand (32622, 32742, 7)", "tag": 1},
   {"label": "end:", "tag": 255},
 
   {"label": "port hope|north.exit~depot:", "tag": 255},
@@ -470,6 +477,10 @@
   {"label": "end:", "tag": 255},
 
   {"label": "port hope|depot~temple:", "tag": 255},
+  {"label": "Node (32625, 32742, 5)", "tag": 0},
+  {"label": "Stand (32626, 32742, 5)", "tag": 1},
+  {"label": "Node (32625, 32748, 6)", "tag": 0},
+  {"label": "Stand (32625, 32749, 6)", "tag": 1},
   {"label": "Node (32617, 32752, 7)", "tag": 0},
   {"label": "Node (32617, 32761, 7)", "tag": 0},
   {"label": "Node (32606, 32761, 7)", "tag": 0},
@@ -694,13 +705,16 @@
   {"label": "end:", "tag": 255},
 
   {"label": "port hope|depot~bank:", "tag": 255},
+  {"label": "Node (32625, 32742, 5)", "tag": 0},
+  {"label": "Stand (32626, 32742, 5)", "tag": 1},
+  {"label": "Node (32625, 32748, 6)", "tag": 0},
+  {"label": "Stand (32625, 32749, 6)", "tag": 1},
   {"label": "Node (32624, 32749, 7)", "tag": 0},
   {"label": "Stand (32625, 32749, 7)", "tag": 1},
   {"label": "Node (32632, 32746, 6)", "tag": 0},
   {"label": "Node (32632, 32739, 6)", "tag": 0},
   {"label": "Stand (32632, 32739, 6)", "tag": 1},
   {"label": "end:", "tag": 255},
-
 
   {"label": "port hope|south.exit~potions:", "tag": 255}, 
   {"label": "Node (32643, 32791, 7)", "tag": 0},
@@ -805,6 +819,10 @@
   {"label": "end:", "tag": 255},
 
   {"label": "port hope|depot~potions:", "tag": 255},
+  {"label": "Node (32625, 32742, 5)", "tag": 0},
+  {"label": "Stand (32626, 32742, 5)", "tag": 1},
+  {"label": "Node (32625, 32748, 6)", "tag": 0},
+  {"label": "Stand (32625, 32749, 6)", "tag": 1},
   {"label": "Node (32624, 32749, 7)", "tag": 0},
   {"label": "Stand (32625, 32749, 7)", "tag": 1},
   {"label": "Node (32625, 32743, 6)", "tag": 0},
@@ -957,6 +975,10 @@
   {"label": "end:", "tag": 255},
 
   {"label": "port hope|depot~runes:", "tag": 255},
+  {"label": "Node (32625, 32742, 5)", "tag": 0},
+  {"label": "Stand (32626, 32742, 5)", "tag": 1},
+  {"label": "Node (32625, 32748, 6)", "tag": 0},
+  {"label": "Stand (32625, 32749, 6)", "tag": 1},
   {"label": "Node (32624, 32749, 7)", "tag": 0},
   {"label": "Stand (32625, 32749, 7)", "tag": 1},
   {"label": "Node (32625, 32743, 6)", "tag": 0},
@@ -1093,6 +1115,10 @@
   {"label": "end:", "tag": 255},
         
   {"label": "port hope|depot~ammo:", "tag": 255},
+  {"label": "Node (32625, 32742, 5)", "tag": 0},
+  {"label": "Stand (32626, 32742, 5)", "tag": 1},
+  {"label": "Node (32625, 32748, 6)", "tag": 0},
+  {"label": "Stand (32625, 32749, 6)", "tag": 1},
   {"label": "Node (32624, 32749, 7)", "tag": 0},
   {"label": "Stand (32625, 32749, 7)", "tag": 1},
   {"label": "Node (32632, 32746, 6)", "tag": 0},
@@ -1227,6 +1253,10 @@
   {"label": "end:", "tag": 255},
         
   {"label": "port hope|depot~loot:", "tag": 255},
+  {"label": "Node (32625, 32742, 5)", "tag": 0},
+  {"label": "Stand (32626, 32742, 5)", "tag": 1},
+  {"label": "Node (32625, 32748, 6)", "tag": 0},
+  {"label": "Stand (32625, 32749, 6)", "tag": 1},
   {"label": "Node (32624, 32749, 7)", "tag": 0},
   {"label": "Stand (32625, 32749, 7)", "tag": 1},
   {"label": "Node (32632, 32746, 6)", "tag": 0},
@@ -1345,6 +1375,10 @@
   {"label": "end:", "tag": 255},
 
   {"label": "port hope|depot~food:", "tag": 255},
+  {"label": "Node (32625, 32742, 5)", "tag": 0},
+  {"label": "Stand (32626, 32742, 5)", "tag": 1},
+  {"label": "Node (32625, 32748, 6)", "tag": 0},
+  {"label": "Stand (32625, 32749, 6)", "tag": 1},
   {"label": "Node (32619, 32751, 7)", "tag": 0},
   {"label": "Node (32617, 32756, 7)", "tag": 0},
   {"label": "Node (32615, 32761, 7)", "tag": 0},
@@ -1495,6 +1529,10 @@
   {"label": "end:", "tag": 255},
 
   {"label": "port hope|depot~trainers:", "tag": 255},
+  {"label": "Node (32625, 32742, 5)", "tag": 0},
+  {"label": "Stand (32626, 32742, 5)", "tag": 1},
+  {"label": "Node (32625, 32748, 6)", "tag": 0},
+  {"label": "Stand (32625, 32749, 6)", "tag": 1},
   {"label": "Node (32622, 32754, 7)", "tag": 0},
   {"label": "Node (32628, 32760, 7)", "tag": 0},
   {"label": "Node (32630, 32767, 7)", "tag": 0},
@@ -1699,6 +1737,10 @@
   {"label": "end:", "tag": 255},
 
   {"label": "port hope|depot~north.exit:", "tag": 255},
+  {"label": "Node (32625, 32742, 5)", "tag": 0},
+  {"label": "Stand (32626, 32742, 5)", "tag": 1},
+  {"label": "Node (32625, 32748, 6)", "tag": 0},
+  {"label": "Stand (32625, 32749, 6)", "tag": 1},
   {"label": "Node (32622, 32745, 7)", "tag": 0},
   {"label": "Node (32620, 32750, 7)", "tag": 0},
   {"label": "Node (32616, 32748, 7)", "tag": 0},
@@ -1821,6 +1863,10 @@
   {"label": "end:", "tag": 255},
         
   {"label": "port hope|depot~east.exit:", "tag": 255},
+  {"label": "Node (32625, 32742, 5)", "tag": 0},
+  {"label": "Stand (32626, 32742, 5)", "tag": 1},
+  {"label": "Node (32625, 32748, 6)", "tag": 0},
+  {"label": "Stand (32625, 32749, 6)", "tag": 1},
   {"label": "Node (32623, 32752, 7)", "tag": 0},
   {"label": "Node (32631, 32753, 7)", "tag": 0},
   {"label": "Node (32638, 32754, 7)", "tag": 0},
@@ -1984,6 +2030,10 @@
   {"label": "end:", "tag": 255},
 
   {"label": "port hope|depot~south.exit:", "tag": 255},
+  {"label": "Node (32625, 32742, 5)", "tag": 0},
+  {"label": "Stand (32626, 32742, 5)", "tag": 1},
+  {"label": "Node (32625, 32748, 6)", "tag": 0},
+  {"label": "Stand (32625, 32749, 6)", "tag": 1},
   {"label": "Node (32623, 32752, 7)", "tag": 0},
   {"label": "Node (32628, 32757, 7)", "tag": 0},
   {"label": "Node (32629, 32763, 7)", "tag": 0},

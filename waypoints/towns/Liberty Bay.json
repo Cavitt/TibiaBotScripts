@@ -25,6 +25,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "liberty bay|depot~meriana.exit:", "tag": 255},
+  {"label": "Node (32335, 32837, 7)", "tag": 0},
+  {"label": "Stand (32336, 32838, 7)", "tag": 1},
   {"label": "Node (32336, 32837, 6)", "tag": 0},
   {"label": "Stand (32336, 32838, 6)", "tag": 1},
   {"label": "Node (32336, 32844, 7)", "tag": 0},
@@ -645,6 +647,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "liberty bay|depot~boat:", "tag": 255},
+  {"label": "Node (32335, 32837, 7)", "tag": 0},
+  {"label": "Stand (32336, 32838, 7)", "tag": 1},
   {"label": "Node (32336, 32839, 6)", "tag": 0},
   {"label": "Stand (32336, 32838, 6)", "tag": 1},
   {"label": "Node (32328, 32835, 7)", "tag": 0},
@@ -779,7 +783,7 @@
 
 
   {"label": "liberty bay|depot~depot:", "tag": 255},
-  {"label": "Stand (32342, 32837, 7)", "tag": 1},
+  {"label": "Node (32335, 32837, 7)", "tag": 0},
   {"label": "Stand (32336, 32838, 7)", "tag": 1},
   {"label": "end:", "tag": 255},
 
@@ -1001,12 +1005,13 @@
   {"label": "Stand (32338, 32836, 7)", "tag": 1},
   {"label": "end:", "tag": 255},
 
-  {"label": "liberty bay|depot~bank:", "tag": 255},        
+  {"label": "liberty bay|depot~bank:", "tag": 255},
+  {"label": "Node (32335, 32837, 7)", "tag": 0},
+  {"label": "Stand (32336, 32838, 7)", "tag": 1},
   {"label": "Node (32336, 32839, 6)", "tag": 0},
   {"label": "Stand (32336, 32838, 6)", "tag": 1},
   {"label": "Stand (32338, 32836, 7)", "tag": 1},
   {"label": "end:", "tag": 255},
-
 
   {"label": "liberty bay|potions~potions:", "tag": 255},
   {"label": "Node (32347, 32813, 7)", "tag": 0},
@@ -1052,7 +1057,9 @@
   {"label": "Stand (32345, 32810, 7)", "tag": 1},
   {"label": "end:", "tag": 255},
 
-  {"label": "liberty bay|depot~potions:", "tag": 255},  
+  {"label": "liberty bay|depot~potions:", "tag": 255},
+  {"label": "Node (32335, 32837, 7)", "tag": 0},
+  {"label": "Stand (32336, 32838, 7)", "tag": 1},
   {"label": "Node (32336, 32839, 6)", "tag": 0},
   {"label": "Stand (32336, 32838, 6)", "tag": 1},
   {"label": "Node (32330, 32835, 7)", "tag": 0},
@@ -1165,7 +1172,9 @@
   {"label": "Stand (32345, 32810, 7)", "tag": 1},
   {"label": "end:", "tag": 255},
 
-  {"label": "liberty bay|depot~runes:", "tag": 255},  
+  {"label": "liberty bay|depot~runes:", "tag": 255},
+  {"label": "Node (32335, 32837, 7)", "tag": 0},
+  {"label": "Stand (32336, 32838, 7)", "tag": 1},
   {"label": "Node (32336, 32839, 6)", "tag": 0},
   {"label": "Stand (32336, 32838, 6)", "tag": 1},
   {"label": "Node (32330, 32835, 7)", "tag": 0},
@@ -1275,7 +1284,9 @@
   {"label": "Stand (32317, 32827, 7)", "tag": 1},
   {"label": "end:", "tag": 255},
 
-  {"label": "liberty bay|depot~temple:", "tag": 255}, 
+  {"label": "liberty bay|depot~temple:", "tag": 255},
+  {"label": "Node (32335, 32837, 7)", "tag": 0},
+  {"label": "Stand (32336, 32838, 7)", "tag": 1},
   {"label": "Stand (32336, 32838, 6)", "tag": 1},
   {"label": "Node (32328, 32835, 7)", "tag": 0},
   {"label": "Node (32321, 32832, 7)", "tag": 0},
@@ -1431,6 +1442,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "liberty bay|depot~ammo:", "tag": 255},
+  {"label": "Node (32335, 32837, 7)", "tag": 0},
+  {"label": "Stand (32336, 32838, 7)", "tag": 1},
   {"label": "Stand (32336, 32838, 6)", "tag": 1},
   {"label": "Node (32328, 32835, 7)", "tag": 0},
   {"label": "Node (32318, 32834, 7)", "tag": 0},
@@ -1521,6 +1534,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "liberty bay|depot~loot:", "tag": 255},
+  {"label": "Node (32335, 32837, 7)", "tag": 0},
+  {"label": "Stand (32336, 32838, 7)", "tag": 1},
   {"label": "Stand (32336, 32838, 6)", "tag": 1},
   {"label": "Node (32328, 32835, 7)", "tag": 0},
   {"label": "Node (32318, 32834, 7)", "tag": 0},
@@ -1648,6 +1663,8 @@
   {"label": "end:", "tag": 255},
 
   {"label": "liberty bay|depot~food:", "tag": 255},
+  {"label": "Node (32335, 32837, 7)", "tag": 0},
+  {"label": "Stand (32336, 32838, 7)", "tag": 1},
   {"label": "Stand (32336, 32838, 6)", "tag": 1},
   {"label": "Node (32327, 32835, 7)", "tag": 0},
   {"label": "Node (32320, 32837, 7)", "tag": 0},
@@ -1994,6 +2011,8 @@
   {"label": "end:", "tag": 255},
         
   {"label": "liberty bay|depot~trainers:", "tag": 255},
+  {"label": "Node (32335, 32837, 7)", "tag": 0},
+  {"label": "Stand (32336, 32838, 7)", "tag": 1},
   {"label": "Node (32336, 32837, 6)", "tag": 0},
   {"label": "Stand (32336, 32838, 6)", "tag": 1},
   {"label": "Node (32328, 32835, 7)", "tag": 0},
@@ -2048,6 +2067,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "liberty bay|depot~west.exit:", "tag": 255},
+  {"label": "Node (32335, 32837, 7)", "tag": 0},
+  {"label": "Stand (32336, 32838, 7)", "tag": 1},
   {"label": "Node (32337, 32838, 6)", "tag": 0},
   {"label": "Stand (32336, 32838, 6)", "tag": 1},
   {"label": "Node (32331, 32835, 7)", "tag": 0},
@@ -2439,6 +2460,8 @@
   {"label": "end:", "tag": 255},
   
   {"label": "liberty bay|depot~south.exit:", "tag": 255},
+  {"label": "Node (32335, 32837, 7)", "tag": 0},
+  {"label": "Stand (32336, 32838, 7)", "tag": 1},
   {"label": "Node (32337, 32838, 6)", "tag": 0},
   {"label": "Stand (32336, 32838, 6)", "tag": 1},
   {"label": "Node (32330, 32836, 7)", "tag": 0},
