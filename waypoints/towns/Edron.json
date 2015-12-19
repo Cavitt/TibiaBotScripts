@@ -1017,6 +1017,11 @@
   {"label": "end:", "tag": 255},
 
   {"label": "edron|depot~depot:", "tag": 255},
+  {"label": "Node (33167, 31808, 10)", "tag": 0},
+  {"label": "Stand (33166, 31808, 10)", "tag": 1},
+  {"label": "Stand (33167, 31808, 9)", "tag": 1},
+  {"label": "Node (33169, 31811, 7)", "tag": 0},
+  {"label": "Stand (33169, 31812, 7)", "tag": 1},
   {"label": "Node (33168, 31800, 8)", "tag": 0},
   {"label": "Stand (33168, 31800, 8)", "tag": 1},
   {"label": "end:", "tag": 255},  
