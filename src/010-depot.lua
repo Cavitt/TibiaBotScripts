@@ -49,7 +49,7 @@ Depot = (function()
 			-- Open Locker in same window (first slot)
 			xeno.containerUseItem(browsefield, 0, true, true)
 			-- Wait for Locker window
-			whenContainerUpdates(browsefield+1, function(success)
+			whenContainerUpdates(browsefield, function(success)
 				if not success then
 					openLocker(callback)
 					return
@@ -81,7 +81,7 @@ Depot = (function()
 			-- Open Depot in same window (first slot)
 			xeno.containerUseItem(locker, 0, true, true)
 			-- Wait for Depot window
-			whenContainerUpdates(locker+1, function(success)
+			whenContainerUpdates(locker, function(success)
 				if not success then
 					openDepot(callback)
 					return
