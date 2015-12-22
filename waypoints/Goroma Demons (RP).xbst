@@ -4,8 +4,8 @@
 </panel>
 <panel name="Self Healer">
 	<control name="SpellList">
-		<item spell="exura gran san" mana="210" vcomp="0" vsign="1" vrandom="0" vvalue="40" enabled="1"/>
-		<item spell="exura gran" mana="70" vcomp="0" vsign="1" vrandom="0" vvalue="80" enabled="1"/>
+		<item spell="exura gran san" mana="210" vcomp="0" vsign="1" vrandom="0" vvalue="55" enabled="1"/>
+		<item spell="exura gran" mana="70" vcomp="0" vsign="1" vrandom="0" vvalue="85" enabled="1"/>
 		<item spell="exura" mana="20" vcomp="0" vsign="1" vrandom="0" vvalue="92" enabled="1"/>
 	</control>
 	<control name="ItemList">
