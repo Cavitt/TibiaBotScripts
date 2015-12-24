@@ -697,7 +697,7 @@ do
 			hudUpdatePositions()
 		end
 
-		-- Change gold (only on Open Tibia)
+		--[[ Change gold (only on Open Tibia)
 		if xeno.isRealTibia() ~= 1 then
 			local mainbp = _backpacks['Main']
 			local goldbp = _backpacks['Gold']
@@ -720,7 +720,7 @@ do
 					if used then break end
 				end
 			end
-		end
+		end]]
 
 		-- Unruster
 		unrustLoot()
