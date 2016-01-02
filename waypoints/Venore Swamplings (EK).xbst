@@ -4,12 +4,12 @@
 </panel>
 <panel name="Self Healer">
 	<control name="SpellList">
-		<item spell="Exura Ico" mana="40" vcomp="0" vsign="1" vrandom="0" vvalue="80" enabled="1"/>
-		<item spell="Exura Ico" mana="40" vcomp="1" vsign="3" vrandom="0" vvalue="99" enabled="1"/>
+		<item spell="Exura Infir Ico" mana="10" vcomp="0" vsign="1" vrandom="0" vvalue="80" enabled="1"/>
+		<item spell="Exura Infir Ico" mana="10" vcomp="1" vsign="3" vrandom="0" vvalue="99" enabled="1"/>
 	</control>
 	<control name="ItemList">
-		<item id="266" vcomp="0" vsign="1" vrandom="0" vvalue="50" enabled="1"/>
-		<item id="268" vcomp="0" vsign="3" vrandom="0" vvalue="50" enabled="1"/>
+		<item id="266" vcomp="0" vsign="1" vrandom="0" vvalue="30" enabled="1"/>
+		<item id="268" vcomp="0" vsign="3" vrandom="0" vvalue="20" enabled="1"/>
 	</control>
 </panel>
 <panel name="Tools">
