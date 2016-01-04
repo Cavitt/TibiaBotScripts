@@ -260,6 +260,7 @@
 		<item text="Stay-Second-Floor:" tag="255"/>
 		<item text="Walker.Goto('secondFloor')" tag="254"/>
 		<item text="No-Stay-Second-Floor:" tag="255"/>
+		<item text="No-Second-Floor:" tag="255"/>
 		<item text="Node (33043, 32554, 9)" tag="0"/>
 		<item text="Stand (33043, 32554, 9)" tag="1"/>
 		<item text="Rope (33043, 32554, 9)" tag="3"/>
