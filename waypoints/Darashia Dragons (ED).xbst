@@ -61,7 +61,7 @@
 	<control name="TargetingList">
 		<item type="Dragon" chs="0" max="10" min="0" prio="5" prox="7" count="1"/>
 		<item type="Dragon Hatchling" chs="2" max="100" min="0" prio="3" prox="7" count="1"/>
-		<item type="Dragon" chs="2" max="100" min="20" prio="1" prox="7" count="1"/>
+		<item type="Dragon" chs="2" max="100" min="10" prio="1" prox="7" count="1"/>
 		<item type="*" chs="0" max="100" min="0" prio="10" prox="7" count="1"/>
 	</control>
 </panel>
