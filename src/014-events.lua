@@ -24,6 +24,7 @@ do
 	local getSelfName = Core.getSelfName
 	local sortPositionsByDistance = Core.sortPositionsByDistance
 	local cast = Core.cast
+	local isSpell = Core.isSpell
 	local cureConditions = Core.cureConditions
 	local checkSoftBoots = Core.checkSoftBoots
 	local log = Console.log
@@ -1085,7 +1086,7 @@ do
 				end, true)--]]
 			end
 		-- Spell, forward to default channel
-		elseif xeno.getSelfSpellRequirementsMet(message:lower()) then
+		elseif isSpell(message:lower()) then
 			xeno.selfSay(message)
 		-- Not command, handle as usual
 		else

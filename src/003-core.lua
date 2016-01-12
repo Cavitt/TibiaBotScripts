@@ -464,6 +464,20 @@ Core = (function()
 			and xeno.selfSay(words)
 	end
 
+	local function isSpell(words)
+		local spellPrefixes = {'exan', 'exura', 'utan', 'utevo', 'exevo', 'exor', 'utor'}
+		local isSpell = false
+		for i = 1, #spellPrefixes do
+			local prefix = spellPrefixes[i]
+			local pattern = ("^%s.*$"):format(prefix)
+			if words:match(pattern) then
+				isSpell = true
+				break
+			end
+		end
+		return isSpell
+	end
+
 	local function cureConditions(callback)
 		local conditions = {
 			poisoned = {
@@ -668,6 +682,7 @@ Core = (function()
 		talk = talk,
 		clearWalkerPath = clearWalkerPath,
 		cast = cast,
+		isSpell = isSpell,
 		cureConditions = cureConditions,
 		isCorpseOpen = isCorpseOpen,
 		getWalkableTiles = getWalkableTiles,
