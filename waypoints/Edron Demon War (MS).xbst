@@ -59,24 +59,9 @@
 </panel>
 <panel name="Targeting">
 	<control name="TargetingList">
-		<item type="Shaburak Lord" chs="6" max="50" min="0" prio="9" prox="7" count="1"/>
-		<item type="Shaburak Lord" chs="6" max="100" min="0" prio="6" prox="3" count="1"/>
-		<item type="Shaburak Lord" chs="6" max="100" min="0" prio="5" prox="7" count="1"/>
-		<item type="Askarak Lord" chs="6" max="50" min="0" prio="9" prox="7" count="1"/>
-		<item type="Askarak Lord" chs="6" max="100" min="0" prio="6" prox="3" count="1"/>
-		<item type="Askarak Lord" chs="6" max="100" min="0" prio="5" prox="7" count="1"/>
-		<item type="Shaburak Prince" chs="6" max="50" min="0" prio="8" prox="7" count="1"/>
-		<item type="Shaburak Prince" chs="6" max="100" min="0" prio="4" prox="3" count="1"/>
-		<item type="Shaburak Prince" chs="6" max="100" min="0" prio="3" prox="7" count="1"/>
-		<item type="Askarak Prince" chs="6" max="50" min="0" prio="8" prox="7" count="1"/>
-		<item type="Askarak Prince" chs="6" max="100" min="0" prio="4" prox="3" count="1"/>
-		<item type="Askarak Prince" chs="6" max="100" min="0" prio="3" prox="7" count="1"/>
-		<item type="Shaburak Demon" chs="6" max="50" min="0" prio="7" prox="7" count="1"/>
-		<item type="Shaburak Demon" chs="6" max="100" min="0" prio="2" prox="3" count="1"/>
-		<item type="Shaburak Demon" chs="6" max="100" min="0" prio="1" prox="7" count="1"/>
-		<item type="Askarak Demon" chs="6" max="50" min="0" prio="7" prox="7" count="1"/>
-		<item type="Askarak Demon" chs="6" max="100" min="0" prio="2" prox="3" count="1"/>
-		<item type="Askarak Demon" chs="6" max="100" min="0" prio="1" prox="7" count="1"/>
+		<item type="Askarak Demon, Shaburak Demon, Askarak Prince, Shaburak Prince, Askarak Lord, Shaburak Lord" chs="6" max="40" min="0" prio="2" prox="7" count="1" elastic="1"/>
+		<item type="Askarak Demon, Shaburak Demon, Askarak Prince, Shaburak Prince, Askarak Lord, Shaburak Lord" chs="6" max="100" min="0" prio="1" prox="7" count="1" elastic="1"/>
+		<item type="Hero, Dragon, Priestess, Hunter" chs="6" max="100" min="0" prio="10" prox="7" count="1"/>
 		<item type="*" chs="0" max="100" min="0" prio="10" prox="7" count="1"/>
 	</control>
 </panel>
@@ -117,6 +102,7 @@
 		<item text="Node (33165, 31651, 7)" tag="0"/>
 		<item text="Node (33162, 31644, 7)" tag="0"/>
 		<item text="Node (33163, 31637, 7)" tag="0"/>
+		<item text="Self.Cast('utana vid')" tag="254"/>
 		<item text="Stand (33163, 31636, 7)" tag="1"/>
 		<item text="Node (33162, 31630, 8)" tag="0"/>
 		<item text="Node (33161, 31625, 8)" tag="0"/>
@@ -357,6 +343,7 @@
 		<item text="SIgnore" tag="10"/>
 		<item text="Node (33262, 31940, 14)" tag="0"/>
 		<item text="Stand (33262, 31939, 14)" tag="1"/>
+		<item text="Self.Cast('utana vid')" tag="254"/>
 		<item text="spawnexit:" tag="255"/>
 		<item text="edron|spawn~bridge:" tag="255"/>
 		<item text="Stand (33259, 31941, 15)" tag="1"/>
