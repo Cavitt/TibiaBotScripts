@@ -1084,6 +1084,9 @@ do
 					end)
 				end, true)--]]
 			end
+		-- Spell, forward to default channel
+		elseif xeno.getSelfSpellRequirementsMet(message:lower()) then
+			xeno.selfSay(message)
 		-- Not command, handle as usual
 		else
 			checkEvents(EVENT_COMMAND, message)
