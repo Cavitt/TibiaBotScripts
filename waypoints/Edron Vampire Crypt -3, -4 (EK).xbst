@@ -109,6 +109,7 @@
 		<item text="Node (33111, 31719, 7)" tag="0"/>
 		<item text="Node (33114, 31725, 7)" tag="0"/>
 		<item text="Node (33109, 31722, 7)" tag="0"/>
+		<item text="if Self.ItemCount(3049) > 0 then Walker.Delay(1000) Self.Equip(3049, 'ring') end" tag="254"/>
 		<item text="Stand (33109, 31721, 7)" tag="1"/>
 		<item text="Node (33100, 31716, 8)" tag="0"/>
 		<item text="Node (33091, 31714, 8)" tag="0"/>
@@ -141,6 +142,7 @@
 		<item text="Node (32997, 31625, 9)" tag="0"/>
 		<item text="Node (32990, 31625, 9)" tag="0"/>
 		<item text="Stand (32989, 31625, 9)" tag="1"/>
+		<item text="if Self.Ring().id == 3086 then Walker.Delay(1000) Self.Dequip('ring', Container.GetFirst()) end" tag="254"/>
 		<item text="end:" tag="255"/>
 		<item text="enterspawn:" tag="255"/>
 		<item text="huntcheck|Rush-To-Bottom-Floor|No-Rush-To-Bottom-Floor:" tag="255"/>
@@ -335,6 +337,7 @@
 		<item text="huntcheck|1:" tag="255"/>
 		<item text="huntexit|1:" tag="255"/>
 		<item text="SIgnore" tag="10"/>
+		<item text="if Self.ItemCount(3049) > 0 then Walker.Delay(1000) Self.Equip(3049, 'ring') end" tag="254"/>
 		<item text="Node (33001, 31636, 10)" tag="0"/>
 		<item text="Node (32999, 31631, 10)" tag="0"/>
 		<item text="Node (32993, 31628, 10)" tag="0"/>
@@ -374,6 +377,7 @@
 		<item text="Node (33100, 31716, 8)" tag="0"/>
 		<item text="Node (33109, 31720, 8)" tag="0"/>
 		<item text="Stand (33109, 31721, 8)" tag="1"/>
+		<item text="if Self.Ring().id == 3086 then Walker.Delay(1000) Self.Dequip('ring', Container.GetFirst()) end" tag="254"/>
 		<item text="Node (33114, 31725, 7)" tag="0"/>
 		<item text="Node (33111, 31719, 7)" tag="0"/>
 		<item text="Node (33110, 31713, 7)" tag="0"/>
