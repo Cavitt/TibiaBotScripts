@@ -72,7 +72,7 @@
 	<control name="WaypointList">
 		<item text="edron|bridge~spawn:" tag="255"/>
 		<item text="SIgnore" tag="10"/>
-		<item text="if not Self.isHasted() then Self.Say('utani gran hur') end" tag="254"/>
+		<item text="if not Self.isHasted() then Self.Say('utani hur') end" tag="254"/>
 		<item text="Node (33243, 31797, 7)" tag="0"/>
 		<item text="Node (33245, 31790, 7)" tag="0"/>
 		<item text="Node (33249, 31785, 7)" tag="0"/>
@@ -240,7 +240,7 @@
 		<item text="spawnexit:" tag="255"/>
 		<item text="edron|spawn~bridge:" tag="255"/>
 		<item text="SIgnore" tag="10"/>
-		<item text="if not Self.isHasted() then Self.Say('utani gran hur') end" tag="254"/>
+		<item text="if not Self.isHasted() then Self.Say('utani hur') end" tag="254"/>
 		<item text="Node (33128, 31712, 15)" tag="0"/>
 		<item text="Node (33138, 31712, 15)" tag="0"/>
 		<item text="Node (33143, 31709, 15)" tag="0"/>
