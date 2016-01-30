@@ -89,11 +89,11 @@
 		<item text="door1:" tag="255"/>
 		<item text="Self.UseDoor(32554, 32860, 9) wait(500) Self.Step(WEST)" tag="254"/>
 		<item text="Node (32550, 32856, 9)" tag="0"/>
-		<item text="Walker.ConditionalGoto((Self.Position().x >= 32554), 'door1')" tag="254"/>
 		<item text="end:" tag="255"/>
 		<item text="enterspawn:" tag="255"/>
 		<item text="huntstart|1:" tag="255"/>
 		<item text="Node (32543, 32850, 9)" tag="0"/>
+		<item text="Walker.ConditionalGoto((Self.Position().x >= 32554), 'door1')" tag="254"/>
 		<item text="Node (32547, 32842, 9)" tag="0"/>
 		<item text="Node (32559, 32833, 9)" tag="0"/>
 		<item text="Node (32564, 32823, 9)" tag="0"/>
