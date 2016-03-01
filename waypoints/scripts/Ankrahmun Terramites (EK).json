@@ -3,7 +3,7 @@
   {"label": "SIgnore", "tag": "10"},
   {"label": "Node (33152, 32751, 7)", "tag": "0"},
   {"label": "Node (33143, 32744, 7)", "tag": "0"},
-  {"label": "Self.UseDoor(33032, 32398, 11) wait(500) Self.Step(WEST) wait(500) Walker.ConditionalGoto((Self.Position().x >= 33032), 'doorCheck2')", "tag":"254"},
+  {"label": "Self.UseDoor(33032, 32398, 11);wait(500);Self.Step(WEST);wait(500);Walker.ConditionalGoto((Self.Position().x >= 33032), 'doorCheck2');", "tag":"254"},
   {"label": "Node (33135, 32736, 7)", "tag": "0"},
   {"label": "Node (33127, 32726, 7)", "tag": "0"},
   {"label": "Node (33120, 32717, 7)", "tag": "0"},

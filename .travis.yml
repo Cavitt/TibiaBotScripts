@@ -24,6 +24,9 @@ install: npm install
 # Build scripts
 script: npm run build
 
+# Deploy to script repository
+after_success: npm run deploy
+
 # Upload build artifacts
 deploy:
   # Github Release
@@ -33,20 +36,6 @@ deploy:
       secure: WJskVZr0p3jVH+wDVTugDAkuZfNhXXhaQVdLdxYGRS9XWsRiHpZ+N3ez1vDCgBUxaZFV7EXpx6t56czGSbD/mi+tSxDTb8TPLnZeqSvRxncCM8W5Gy7fQrFg1U+4fNan8vZ+EeURjlfFH/1z+ed7GVPc+Y6vDXtJWxViZC0nxugY8yaoIoFqBmgN4BZyac3YV4Nk1vmlzD9jRy813XhS0JzoilKPwK8CS6PKvX5YKeODZVtPJgB0Ebz+NPWyXjpgiuinMGnUBCTRE21O6q53s0l1MKnf/fW4yzMZnsExSLqFXVx+m+aqUFTpPxaYjzuF+5ra8duPMs+2MHJUfBAzt7jBZXmJNYCe8Uaf/Zw/B1h5O80hvAKp4fRroMfzSUf/xWBMlReFh1+qee5RpbO+u8dNw8/EtGAZws/BTQku6G4j8u1cFqq21vwi/xp6YCtr0OOkE5jbhxHPqzgK+l3/Ru29+LWA2VRQjoXPWDBbKq6iAjehYGfiN9C9ZbKpeaqxd4EIiknFuGK+FZmB/qJFpiL9tYKYbrL7HCiaH9IcZEF1uE/IKme9tcPT3SEmZk891WH7l4jMZoXbt3Nt2xPGR0Jvjbs16i6BH1t8fVFIBgTJ9lyznAV71Zv1+swex1Tsk/coSaNQFuWcb6cmSeI3TdQXKvkqH5oCCCVjLPXD8zU=
     file: "./build/scripts.zip"
     on:
-      tags: true
-
-  # Beta Release (master)
-  - provider: script
-    script: deploy-beta.sh
-    on:
-      repo: OXGaming/oxscripts
-      branch: master
-
-  # Public Release (tagged)
-  - provider: script
-    script: deploy-release.sh
-    on:
-      repo: OXGaming/oxscripts
       tags: true
 
 notifications:

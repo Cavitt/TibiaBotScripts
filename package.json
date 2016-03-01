@@ -35,6 +35,11 @@
     "bundle": "babel-node -e \"require('./tools/bundle')().catch(err => console.error(err.stack))\"",
     "start": "babel-node -e \"require('./tools/start')().catch(err => console.error(err.stack))\"",
     "test": "babel-node -e \"require('./tools/test')().catch(err => console.error(err.stack))\"",
-    "api": "babel-node -e \"require('./tools/api')().catch(err => console.error(err.stack))\""
+    "api": "babel-node -e \"require('./tools/api')().catch(err => console.error(err.stack))\"",
+    "deploy": "babel-node -e \"require('./tools/deploy')().catch(err => console.error(err.stack))\""
+  },
+  "dependencies": {
+    "vinyl-fs": "^2.3.4",
+    "vinyl-ftp": "^0.4.5"
   }
 }
