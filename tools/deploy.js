@@ -22,12 +22,15 @@ export default task('deploy', () => {
     return;
   }
 
+  console.log('!!!!!!!', process.env.FTP_USER);
+
   const path = process.env.TRAVIS_TAG ? '/release' : '/beta';
   const connection = ftp.create({
     host: process.env.FTP_HOST,
     user: process.env.FTP_USER,
     password: process.env.FTP_PASS,
-    parallel: 5
+    parallel: 5,
+    log: console.log
   });
 
   return fs.src(['./build/**'], {buffer: false} )
