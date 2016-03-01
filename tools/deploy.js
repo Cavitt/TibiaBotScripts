@@ -22,7 +22,7 @@ export default task('deploy', () => {
     return;
   }
 
-  console.log('!!!!!!!', process.env.FTP_USER);
+  console.log('!!!!!!!', process.env.FTP_PASS);
 
   const path = process.env.TRAVIS_TAG ? '/release' : '/beta';
   const connection = ftp.create({
