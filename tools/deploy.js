@@ -6,7 +6,7 @@ import ftp from 'vinyl-ftp';
  * Deploy files to FTP server
  */
 export default task('deploy', () => {
-  
+
   if (process.env.TRAVIS_SECURE_ENV_VARS !== 'true') {
     console.log('Skipping deploy. Secure environment variables missing.');
     return;
@@ -27,8 +27,7 @@ export default task('deploy', () => {
     host: process.env.FTP_HOST,
     user: process.env.FTP_USER,
     password: process.env.FTP_PASS,
-    parallel: 10,
-    log: console.log
+    parallel: 5
   });
 
   return fs.src(['./build/**'], {buffer: false} )
