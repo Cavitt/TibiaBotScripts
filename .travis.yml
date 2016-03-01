@@ -4,7 +4,12 @@ node_js: 4.2
 sudo: false
 cache:
   directories:
-    - node_modules
+    - node_modules  
+env:
+  global:
+  - secure: v/voOaKQXWB7TGTxP1SmxYDPSarIAdt4OnZjMR8JnOXFJabJ6GEUkrf+5UiVHBtOJKHtaeEOOAdrVGESpmT10r7D1L+zxzfeC5pCjGAg3zu2iKFpvHl9nZccuGZ07TY/Iu4cpzTqzzpV86dai2YjMx9pPdtn3zJIjQh2xkinhZh3/Rzuf9/Bnx0oCmiNBFxxO8RB89H0b47PonJ0wzL2Nt6ApoaJ3FPrbADfAqij8oNB8CFt835iVEPN8dj8GyqJK8QWAUqiRsEbvoAH7rn55n3y9gBEDmaw44wEkFsdpI65B6YL8M0eEslo9AOSNASm2g5fv+GyghXesl3tMIC4BAk9gjwV2RMUrjxSVHOiuXGbV/XQNnkqGtoJcVgD5xdINdxvKcX0vvBS8xR1yj5uzXZrPtmcS1YMxwAfIpeL2D/d9mSI7a0AilMOLhwK5YocHwdyC0QhrJDuB7SmYRhbqvbANulvHnCkf1BNGNsuhv4WxOjJFIZEB10LlsIFX6iX1AMBTDrZlocUWqGsEC3xkMztjJt5/zF3uBDyFDdfbTsxrrIA2wLz4QDA51OU+t1VZXtvCojxj5ywMES+aw6n3rzZZTz4npIIyiddm4LfE3WHjY9l+0eL8vtQJan7KV33nSpvzBGzeig6R3vgdEg2svX0woaKIr13kE6IVeJKh/0=
+  - secure: m3XMaZvfFIxbjeSqLExtyKlVQxneeZhAOAaDzxeP8tREAvQ0yFcn7kpbSdbVhO/185MynhcLWgrlOSFrBpYOqIwNOWeUu8qZhfCRr6dPsN0SZ4sAuRV1lMDcI/lOodPehDmLZQxfAIw2T8jXLINaSTIgNubjLis+grPjSnimUi841Kr9Lrv/oN1+R1D0zfTgKCW87FMOPl7Dbuyqy/5D2jRZD3iSvc2bR+EHTQV++CuY05KRojSTZOPIcuMoo6xmRm1a5DdJKrvQqX7U50uDVJebqNC+NXy/+TuVkYClzL52hvkwkHok8NYowLrUICN9ISLQdtsUI0FmzLAGhpstYHwzEfYvZf4iovcSrs/E1NnT5vcBB1CPLnmfZxzrYSFVOziGsJISHuCICwHjpRbLOaECrjDZ6CYOO2ZWFUOfrjy/rO+l76A8Tx6Hr/pgFTnur82TRjl9MvHWyXPGAgFE15lUw7mEYxGOmsP/lbtdO/HTWGm63CxtJ4BF9JE3KbLF7iPlxnf7a8DwuoDgbNX7t2APeuvDmLFbCHaxe49sQinvy22mrOdp7McWlSV3GGogT4PoiqaDtxPfmRfRaDvuEUQJbd+vPMp8Cvdru+eqnJekKXgbQpColE4ogAvDE5C4mMZYQy5TflRI2FHMostlOafhXz3xyXKKnVd7BAnoHAM=
+  - secure: D3WzECBvHrthB6RsITUeyuao0sMB3Si45fZ7ws7CmvBdvU6gb4/JdaMduhCJZ8Aoo9ocbqT3JCr4kDVMPVlPsJn54TfrEpZ3pN087NDkj+3E9M+vGA8ZW+T0Gl5uPY58YDyiBCRE7tw2nRz31Tu2M3reI1nPt86DQDTvFBLyA9pyaw2/E86GyX9A/4WOCuILyL54Wamc6Y9iCNVA6IbNxv1umAd58qvxgim2baR6NCqvrNgKudZKIESVivDVWCpOP0yUMap0zXG7Bo9Q2noZATLKY4RjoGc5Dj0FD6VSsAAQwJ9+26Yy8uyHeHEULY2686azZJDxQZHoD2EZFGn0BSCLbWIciI0Upbm02yUFVcPTmchrRD/LkrRpKnFpSFgMbtCEM5Zf1DWw9KEcKWgmrE1HFJjOUTWPNmB6Slc2sP/eLXxJGlK93zCebD5x9CajN3h01Pjl4bY6Knu2ZNSMNQB4ddL1G69EhxEyhRxoZ2p8+mVhfhXbPckIgkCsS/KMJ0U/NoX+b0ZwfSdpNHxQjzsAUUl3E96FBbB0gnj3qNgKl4eqJkAzj75MjXbSww2KAyQHwVClnKLnCYT7GdGrIRZdUM5JhTU4fJAjlp4dlVVeOZf0hl5uCbyiEPhVYdrFDkQ+PML0skOxAEvWW+HW5DocKriuv5n0lEm7rSulXE0=
 
 # Install misc dependencies
 before_install:
@@ -31,29 +36,15 @@ deploy:
       tags: true
 
   # Beta Release (master)
-  - provider: s3
-    skip_cleanup: true
-    acl: public_read
-    local_dir: build
-    upload-dir: beta
-    access_key_id: AKIAJE4AGGGGZSLBOZZQ
-    secret_access_key:
-      secure: "BhkAXBbhp95jD3Py/IapXwOjoej/2oudF8oY/TKXfE0CO6stpgXHJS/UGDQFIGUSPuIj65gExKzmGBsQm/ypBCjMZqO4ybn19hph9RKp0C5GUpHeLs9Iqy0rDoMI5USLEoSEykZNQhTDv8U9VVbJCvjNJZqCb+95kAxKW7ZfI5SJGiDYyqqY5BzIei1Om0+ddEFCgXIDaNnHt9zd4bj7sylUAJ8kw7S1qLyYv0vovX6tORByJZPzjn/LYDayKNW+V+o0+rgu/zQ/kUzJ8OvRaeW5Ly7YZqlKQrGUgvNGLRSpXtUeUe5agkmDGGbKi3K6WBS67bMKZqWquEXBE1SDB0H9D4EI6l2A3Q7W6qSfjpGC0vLZqlcy/IyZjyvMrdkAEswfTx0v25zneGBEj8H+QNhGVKcOpKEqPVbS1StzQyWmwErxCnZM5FTq0mriAoeupgQlqNy9NuJ4IOUjTLIh4uUGYc8R7zRwxUXFvIaQhKlkRL5ysToGbFVOwxQIwYF7U0Ct/OiRafZ5UgVHRY4zKQYvpFuiiPnFwWN3rk7QMs82aVlCTA9DhbMTCjIBFGL2p68Ds1CAy23a2cVS8PMIWSiWts9P8ZZHIchYt81esqFHZrvC1FO96s4+duDNQLO/vHpU4VBdIUkYnlopUTu8pn5idDi2yZljaCGsJ0hWMMo="
-    bucket: xenobot-scripts
+  - provider: script
+    script: deploy-beta.sh
     on:
       repo: OXGaming/oxscripts
       branch: master
 
   # Public Release (tagged)
-  - provider: s3
-    skip_cleanup: true
-    acl: public_read
-    local_dir: build
-    upload-dir: release
-    access_key_id: AKIAJE4AGGGGZSLBOZZQ
-    secret_access_key:
-      secure: "BhkAXBbhp95jD3Py/IapXwOjoej/2oudF8oY/TKXfE0CO6stpgXHJS/UGDQFIGUSPuIj65gExKzmGBsQm/ypBCjMZqO4ybn19hph9RKp0C5GUpHeLs9Iqy0rDoMI5USLEoSEykZNQhTDv8U9VVbJCvjNJZqCb+95kAxKW7ZfI5SJGiDYyqqY5BzIei1Om0+ddEFCgXIDaNnHt9zd4bj7sylUAJ8kw7S1qLyYv0vovX6tORByJZPzjn/LYDayKNW+V+o0+rgu/zQ/kUzJ8OvRaeW5Ly7YZqlKQrGUgvNGLRSpXtUeUe5agkmDGGbKi3K6WBS67bMKZqWquEXBE1SDB0H9D4EI6l2A3Q7W6qSfjpGC0vLZqlcy/IyZjyvMrdkAEswfTx0v25zneGBEj8H+QNhGVKcOpKEqPVbS1StzQyWmwErxCnZM5FTq0mriAoeupgQlqNy9NuJ4IOUjTLIh4uUGYc8R7zRwxUXFvIaQhKlkRL5ysToGbFVOwxQIwYF7U0Ct/OiRafZ5UgVHRY4zKQYvpFuiiPnFwWN3rk7QMs82aVlCTA9DhbMTCjIBFGL2p68Ds1CAy23a2cVS8PMIWSiWts9P8ZZHIchYt81esqFHZrvC1FO96s4+duDNQLO/vHpU4VBdIUkYnlopUTu8pn5idDi2yZljaCGsJ0hWMMo="
-    bucket: xenobot-scripts
+  - provider: script
+    script: deploy-release.sh
     on:
       repo: OXGaming/oxscripts
       tags: true
