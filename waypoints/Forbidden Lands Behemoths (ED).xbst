@@ -80,7 +80,7 @@
 		<item text="Node (32628, 32770, 7)" tag="0"/>
 		<item text="Stand (32628, 32770, 7)" tag="1"/>
 		<item text="travel|old adall~lorek:" tag="255"/>
-		<item text="wait(1000, 1400):" tag="2554"/>
+		<item text="wait(1000, 1400)" tag="254"/>
 		<item text="travel|lorek~mountain:" tag="255"/>
 		<item text="Node (32981, 32727, 7)" tag="0"/>
 		<item text="Node (32977, 32723, 7)" tag="0"/>

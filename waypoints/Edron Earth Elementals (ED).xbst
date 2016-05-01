@@ -99,6 +99,9 @@
 		<item text="Stand (33154, 31725, 8)" tag="1"/>
 		<item text="beforespawn:" tag="255"/>
 		<item text="Node (33153, 31734, 9)" tag="0"/>
+		<item text="huntcheck|Level-Spy-Check|No-Level-Spy-Check|false|true:" tag="255"/>
+		<item text="spy|-1|nil|4|7|earth elemental:" tag="255"/>
+		<item text="No-Level-Spy-Check:" tag="255"/>
 		<item text="Stand (33154, 31734, 9)" tag="1"/>
 		<item text="end:" tag="255"/>
 		<item text="enterspawn:" tag="255"/>
