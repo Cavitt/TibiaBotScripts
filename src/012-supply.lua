@@ -561,6 +561,12 @@ Supply = (function()
 
 		-- Step 4) Once this is called the amount we will buy is locked
 		if step < 4 then
+			-- Skip step 4 if we're not walking to banks (old NPC system)
+			if not _config['General']['Walk-To-Banks'] then
+				resupply(callback, 4, loot, details)
+				return
+			end
+
 			if details.withdrawGold > 0 then 
 				-- Check capacity
 				if details.capNeeded > 0 then

@@ -299,28 +299,19 @@ Depot = (function()
 			end
 		end
 
-		-- Stackable and nonstackables required
-		if missingBps > 0 then
-			warn('Missing loot and/or stackable loot container in depot. Walking to the equipment shop.')
-			local bpPrice = missingBps * PRICE.BACKPACK
-			-- Walk to bank
-			walkerStartPath(_script.town, 'depot', 'bank', function()
-				-- Withdraw gold
-				bankWithdrawGold(bpPrice, function()
-					-- Walk to tool NPC
-					walkerStartPath(_script.town, 'bank', 'tools', function()
-						-- Buy backpacks
-						shopBuyBackpacks(missingBps, function()
-							-- Walk back to depot
-							walkerStartPath(_script.town, 'tools', 'depot', function()
-								walkerGotoDepot(function()
-									openLocker(function(locker)
-										depositBackpacks(locker, missingBps, function()
-											-- Recurse this insane callstack
-											openDepot(function(newDepot)
-												depotTransfer(newDepot, needDeposit, neededSupplies, callback)
-											end)
-										end)
+		local function walkToTools()
+			-- Walk to tool NPC
+			walkerStartPath(_script.town, 'bank', 'tools', function()
+				-- Buy backpacks
+				shopBuyBackpacks(missingBps, function()
+					-- Walk back to depot
+					walkerStartPath(_script.town, 'tools', 'depot', function()
+						walkerGotoDepot(function()
+							openLocker(function(locker)
+								depositBackpacks(locker, missingBps, function()
+									-- Recurse this insane callstack
+									openDepot(function(newDepot)
+										depotTransfer(newDepot, needDeposit, neededSupplies, callback)
 									end)
 								end)
 							end)
@@ -328,6 +319,23 @@ Depot = (function()
 					end)
 				end)
 			end)
+		end
+
+		-- Stackable and nonstackables required
+		if missingBps > 0 then
+			warn('Missing loot and/or stackable loot container in depot. Walking to the equipment shop.')
+			local bpPrice = missingBps * PRICE.BACKPACK
+			-- Walk to bank
+			if _config['General']['Walk-To-Banks'] then
+				walkerStartPath(_script.town, 'depot', 'bank', function()
+					-- Withdraw gold
+					bankWithdrawGold(bpPrice, function()
+						walkToTools()
+					end)
+				end)
+			else
+				walkToTools()
+			end
 			return
 		end
 

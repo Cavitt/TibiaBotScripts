@@ -415,7 +415,7 @@ Walker = (function()
 
 		-- Needs gold to travel, go to bank from here
 		local travelCostDifference = travelCost - getMoney()
-		if travelCostDifference > 0 then
+		if _config['General']['Walk-To-Banks'] and travelCostDifference > 0 then
 			-- Tell the user we need to go to the bank
 			local bankMessage = 'Traveling to ' .. targetTown:lower() .. ' requires an additional ' .. travelCostDifference .. ' gold.'
 			if location ~= 'bank' then
