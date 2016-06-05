@@ -173,6 +173,13 @@
 		<item text="Node (32236, 32871, 10)" tag="0"/>
 		<item text="Stand (32235, 32870, 10)" tag="1"/>
 		<item text="No-Third-Floor:" tag="255"/>
+		<item text="huntcheck|2:" tag="255"/>
+		<item text="huntexit|2:" tag="255"/>
+		<item text="Node (32248, 32868, 9)" tag="0"/>
+		<item text="Node (32254, 32866, 9)" tag="0"/>
+		<item text="Node (32261, 32866, 9)" tag="0"/>
+		<item text="Walker.Goto('huntexit|1')" tag="254"/>
+		<item text="huntstart|2:" tag="255"/>
 		<item text="Node (32241, 32875, 9)" tag="0"/>
 		<item text="Node (32245, 32879, 9)" tag="0"/>
 		<item text="Node (32246, 32886, 9)" tag="0"/>
