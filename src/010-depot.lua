@@ -285,7 +285,9 @@ Depot = (function()
 	local function depotTransfer(depot, needDeposit, neededSupplies, callback)
 
 		-- Minimize depot container
-		xeno.minimizeContainer(depot)
+		if _config['General']['Minimize-Depot'] then
+			xeno.minimizeContainer(depot)
+		end
 
 		-- Set depot state
 		_script.depotOpen = true
