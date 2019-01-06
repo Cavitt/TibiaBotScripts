@@ -32,7 +32,3 @@ Build a single script and copy it to your XenoBot settings folder.
 ```shell
 $ npm run build --script="Edron Demons (MS)"
 ```
-
-### Contributing
-We use [Trello](https://trello.com/b/3bo3eJH4/ox-scripts) for project management.
-Pull requests are welcome!
