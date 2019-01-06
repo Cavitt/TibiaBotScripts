@@ -1,9 +1,6 @@
-## XenoBot Official Scripts
+## Tibia Bot Scripts
 
-Official XenoBot cavebot scripts for botting on Tibia and some Open-Tibia servers.
-
-[![Build Status](https://travis-ci.org/OXGaming/oxscripts.svg?branch=master)](https://travis-ci.org/OXGaming/oxscripts)
-[![Dev Dependency Status](https://david-dm.org/OXGaming/oxscripts/dev-status.svg)](https://david-dm.org/OXGaming/oxscripts#info=devDependencies)
+XenoBot cavebot scripts for botting on Tibia and some Open-Tibia servers.
 
 ### Dependencies
 Before attempting to get started, please install the following depedencies if you do not already have them.
